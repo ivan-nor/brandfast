@@ -40,3 +40,11 @@ h3, .h3 {
 h4, .h4 {
   @include fluid-text(20, 18);
 }
+
+.hidden,
+.hidden * {
+  display: none !important;
+  /* visibility: hidden; */
+  /* max-height: 0; */
+  /* opacity: 0; */
+}

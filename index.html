@@ -22,28 +22,63 @@
       <nav class="header__menu hidden-mobile">
         <ul class="header__menu-list">
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/">About us</a>
+            <a class="header__menu-link" href="/">
+              <span>услуги</span>
+              <div class="header__dropdown-icon">
+                <img src="./images/icons/arrow-dropdown.svg" alt="dropdown list icon" />
+              </div>
+            </a>
+            <ul class="header__submenu-list hidden">
+              <li class="header__submenu-item">
+                <a href="#" class="header__submenu-link">Подпункт меню 1</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#" class="header__submenu-link">Подпункт меню 2</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#" class="header__submenu-link">Подпункт меню 3</a>
+              </li>
+            </ul>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/">Services</a>
+            <a class="header__menu-link" href="/">о нас</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/">Use Cases</a>
+            <a class="header__menu-link" href="/">портфолио</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/">Pricing</a>
+            <a class="header__menu-link" href="/">наши партнеры и отзывы</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/">Blog</a>
+            <a class="header__menu-link" href="/">новости</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="/">контакты</a>
           </li>
         </ul>
       </nav>
-      <button
+      <div class="header__actions">
+        <ul class="header__actions-list">
+          <li class="header__actions-item">
+            <a href="/" class="header__actions-phone">88005553535</a>
+          </li>
+          <li class="header__actions-item">
+            <a href="/" class="header__actions-cart">
+              <img class="header__actions-cart-image" src="./images/shopping-cart.svg" alt="shopping cart image" width="24" height="24"/>
+              <div class="header__actions-cart-counter"></div>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a href="/" class="header__actions-account">A</a>
+          </li>
+        </ul>
+      </div>
+      <!-- <button
         class="header__button button button--transparent hidden-mobile"
         type="button"
       >
         Request a quote
-      </button>
+      </button> -->
       <button
         class="header__burger-button burger-button visible-mobile"
         type="button"

@@ -32,10 +32,10 @@
 
   &__menu {
     margin-left: auto;
-    font-size: 20px;
+    font-size: 16px;
 
     @include desktop {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @include tablet {
@@ -57,6 +57,7 @@
       display: inline-flex;
       align-items: center;
       height: 48px;
+      white-space: nowrap;
 
       @include hover {
         &::after {
@@ -72,9 +73,20 @@
         translate: -50%;
         width: 0;
         height: 2px;
-        background-color: currentColor;
+        background-color: var(--color-accent);
         transition-duration: inherit;
       }
+    }
+  }
+
+  &__actions {
+    &-list {
+      display: flex;
+      gap: 32px;
+    }
+
+    &-phone {
+      font-weight: bold;
     }
   }
 
