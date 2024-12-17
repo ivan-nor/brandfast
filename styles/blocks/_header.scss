@@ -1,12 +1,12 @@
 .header {
-  padding-top: 60px;
+  padding-block: 18px;
 
   @include desktop {
-    padding-top: 30px;
+    padding-block: 18px;
   }
 
   @include mobile {
-    padding-top: 15px;
+    padding-top: 10px;
   }
 
   &__inner {
@@ -45,19 +45,24 @@
     &-list {
       display: flex;
       align-items: center;
-      column-gap: 40px;
+      // column-gap: 40px;
 
       @include desktop {
-        column-gap: 20px;
+        // column-gap: 20px;
       }
     }
 
     &-link {
       position: relative;
+
+      padding-inline: 16px;
+      height: 52px;
+
       display: inline-flex;
       align-items: center;
-      height: 48px;
       white-space: nowrap;
+
+      font-weight: 500;
 
       @include hover {
         &::after {
@@ -65,11 +70,16 @@
         }
       }
 
+      & span::first-letter {
+        text-transform: uppercase;
+      }
+
       &::after {
         content: '';
         position: absolute;
-        top: 100%;
+        // top: 100%;
         left: 50%;
+        bottom: 0;
         translate: -50%;
         width: 0;
         height: 2px;
@@ -79,14 +89,54 @@
     }
   }
 
+  &__submenu {
+    &-icon {
+      & img {
+        max-width: 24px;
+        // height: auto;
+      }
+    }
+  }
+
   &__actions {
     &-list {
       display: flex;
-      gap: 32px;
+      align-items: center;
+      // gap: 32px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    &-item {
+      padding-inline: 16px;
     }
 
     &-phone {
       font-weight: bold;
+    }
+
+    &-cart {
+      &-image {
+        max-width: 24px;
+      }
+    }
+
+    &-account {
+      // padding: 12px 18px;
+
+      width: 32px;
+      height: 32px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: normal;
+      border-radius: 50%;
+      color: var(--color-accent);
+      background-color: var(--color-dark);
     }
   }
 
