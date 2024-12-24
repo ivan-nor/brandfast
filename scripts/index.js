@@ -6,9 +6,11 @@ for (const item of headerItems) {
   item.addEventListener('mouseover', () => {
     calcSubmenuWidth(submenu)
     submenu.classList.remove('hidden')
+    document.body.classList.add('menu-hovered')
   })
   item.addEventListener('mouseleave', () => {
     submenu.classList.add('hidden')
+    document.body.classList.remove('menu-hovered')
   })
 }
 
