@@ -977,13 +977,6 @@ main::before {
   display: flex;
   gap: 16px;
 }
-.hero__button {
-  white-space: nowrap;
-}
-.hero__button-transparent {
-  background-color: #fff;
-  color: var(--color-dark);
-}
 @media (max-width: 767px) {
   .hero__button {
     width: 100%;

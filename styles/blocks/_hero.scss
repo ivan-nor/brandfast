@@ -110,13 +110,6 @@
   }
 
   &__button {
-    white-space: nowrap;
-
-    &-transparent {
-      background-color: #fff;
-      color: var(--color-dark);
-    }
-
     @include mobile {
       width: 100%;
       max-width: 390px;
