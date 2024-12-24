@@ -56,6 +56,10 @@
           background-color: var(--color-accent);
           // font-weight: bold;
 
+          main::before {
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+
           & .header__menu-link {
             font-weight: bold;
             transition: all 0s;
@@ -125,6 +129,7 @@
   &__submenu {
     &-list {
       position: absolute;
+      z-index: 2;
       // right: 0;
       // left: 0;
       // width: (100vw);
