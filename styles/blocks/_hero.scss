@@ -1,16 +1,23 @@
+.section:has(.hero) {
+  padding-top: 36px;
+  padding-bottom: 0;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
-  row-gap: var(--section-padding-y);
+  row-gap: 76px;
 
   @include desktop {
     row-gap: 60px;
   }
 
   &__main {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     column-gap: 30px;
 
     @include mobile {
@@ -18,12 +25,27 @@
     }
   }
 
+  &__banner {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    p {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
     align-items: start;
-    max-width: 531px;
-    row-gap: 35px;
+    // #TODO: max-width зависит от hero__body-description
+    row-gap: 28px;
 
     @include mobile {
       display: contents;
@@ -31,6 +53,33 @@
   }
 
   &__title {
+    position: relative;
+
+    padding-inline-start: 4px;
+    padding-inline-end: 4px;
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: bold;
+
+    transform: scaleX(1.2);
+    transform-origin: left;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: 4px;
+      width: 100%;
+      height: 16px;
+      background-color: var(--color-accent);
+      border-radius: var(--border-radius-medium);
+    }
+
     @include mobile {
       order: -2;
       margin-bottom: 10px;
@@ -38,15 +87,36 @@
   }
 
   &__description {
-    font-size: 20px;
-    line-height: 1.4;
+    max-width: 550px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    // #TODO: разобраться со шрифтами
+    p {
+      font-family: "Space Grotesk", sans-serif;
+      line-height: 20px;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
 
     @include mobile {
       margin-bottom: 40px;
     }
   }
+  &__footer {
+    display: flex;
+    gap: 16px;
+  }
 
   &__button {
+    white-space: nowrap;
+
+    &-transparent {
+      background-color: #fff;
+      color: var(--color-dark);
+    }
+
     @include mobile {
       width: 100%;
       max-width: 390px;
@@ -56,6 +126,8 @@
 
   &__partners {
     &-list {
+      padding-block: 8px;
+
       display: flex;
       justify-content: space-between;
       column-gap: 37px;
