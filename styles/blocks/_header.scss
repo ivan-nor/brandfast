@@ -130,10 +130,8 @@
     &-list {
       position: absolute;
       z-index: 2;
-      // right: 0;
-      // left: 0;
-      // width: (100vw);
-      // margin-right: var(--container-padding-x);
+      // top: 18px;
+      margin-top: 18px;
       padding: 24px 16px;
 
       display: flex;
@@ -141,6 +139,7 @@
 
 
       background-color: var(--color-accent);
+      border-top: 1px solid var(--color-accent);
       border-bottom-left-radius: var(--border-radius-medium);
       border-bottom-right-radius: var(--border-radius-medium);
     }
@@ -153,23 +152,23 @@
       border-radius: var(--border-radius-small);
       font-weight: 500;
 
-      & span {
+      span {
         font-size: 18px;
-      }
 
-      & span::first-letter {
-        text-transform: uppercase;
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
     }
 
     &-link {
-      & span::first-letter {
+      span::first-letter {
         text-transform: uppercase;
       }
     }
 
     &-icon {
-      & img {
+      img {
         max-width: 24px;
         // height: auto;
       }
