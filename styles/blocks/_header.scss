@@ -1,19 +1,19 @@
 .header {
-  padding-block: 18px;
+  // padding-block: 18px;
 
   @include desktop {
-    padding-block: 18px;
+    // padding-block: 18px;
   }
 
   @include mobile {
-    padding-top: 10px;
+    // padding-top: 10px;
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 40px;
+    // column-gap: 40px;
 
     @include tablet {
       column-gap: 30px;
@@ -21,6 +21,9 @@
   }
 
   &__logo {
+    & img {
+      max-width: max-content;
+    }
     @include tablet {
       max-width: 120px;
     }
@@ -31,7 +34,7 @@
   }
 
   &__menu {
-    margin-left: auto;
+    // margin-left: auto;
     font-size: 16px;
 
     @include desktop {
@@ -42,9 +45,39 @@
       font-size: 16px;
     }
 
+    &-item {
+      position: relative;
+      padding-block: 18px;
+
+      &:has(.header__submenu-list) {
+        max-width: 108px;
+
+        @include hover {
+          background-color: var(--color-accent);
+          // font-weight: bold;
+
+          & .header__menu-link {
+            font-weight: bold;
+            transition: all 0s;
+          }
+
+          & .header__menu-link::after {
+            content: none;
+          }
+
+          & .header__submenu-icon {
+            rotate: 180deg;
+          }
+        }
+      }
+    }
+
     &-list {
+      height: 100%;
+
       display: flex;
-      align-items: center;
+      // align-items: center;
+      align-items: stretch;
       // column-gap: 40px;
 
       @include desktop {
@@ -90,6 +123,46 @@
   }
 
   &__submenu {
+    &-list {
+      position: absolute;
+      // right: 0;
+      // left: 0;
+      // width: (100vw);
+      // margin-right: var(--container-padding-x);
+      padding: 24px 16px;
+
+      display: flex;
+      gap: 20px;
+
+
+      background-color: var(--color-accent);
+      border-bottom-left-radius: var(--border-radius-medium);
+      border-bottom-right-radius: var(--border-radius-medium);
+    }
+
+    &-item {
+      padding: 8px;
+
+      white-space: nowrap;
+      background-color: var(--color-light);
+      border-radius: var(--border-radius-small);
+      font-weight: 500;
+
+      & span {
+        font-size: 18px;
+      }
+
+      & span::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    &-link {
+      & span::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
     &-icon {
       & img {
         max-width: 24px;
@@ -111,6 +184,14 @@
 
     &-item {
       padding-inline: 16px;
+    }
+
+    &-item:first-child {
+      padding-left: 0;
+    }
+
+    &-item:last-child {
+      padding-right: 0;
     }
 
     &-phone {

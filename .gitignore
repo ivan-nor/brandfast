@@ -1,0 +1,5 @@
+.DS_Store
+
+styles/styles.css
+styles/styles.map.css
+# TODO:  не забыть убрать style.css и style.css.map из игнора
