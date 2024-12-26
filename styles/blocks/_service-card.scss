@@ -1,16 +1,12 @@
 .service-card {
-  position: relative;
-
   min-height: 310px;
   padding: 20px 50px 34px;
-  
-  display: flex;
-  justify-content: space-between;
-  // display: grid;
-  // grid-template-columns: repeat(2, auto);
-  // grid-template-rows: repeat(3, auto);
-  column-gap: 30px;
 
+  display: grid;
+  grid-template-columns: 216px 1fr auto;
+  grid-template-rows: auto 44px 52px;
+  column-gap: 14px;
+  row-gap: 16px;
 
   background-color: var(--color-gray);
   border: var(--border);
@@ -25,10 +21,38 @@
 
   &--accent-bg {
     background-color: var(--color-accent);
+
+    .service-card__button {
+      @include hover {
+        background-color: var(--color-light);
+      }
+    }
   }
 
   &--dark-bg {
     background-color: var(--color-dark);
+
+    .service-card__price {
+      color: var(--color-light);
+    }
+
+    .service-card__button {
+      color: var(--color-dark);
+      background-color: var(--color-light);
+
+      @include hover {
+        background-color: var(--color-accent);
+      }
+    }
+
+    & .service-card__link svg path {
+      fill: var(--color-light);
+      stroke: var(--color-dark);
+
+      &:nth-child(n + 2) {
+        stroke: var(--color-dark);
+      }
+    }
   }
 
   &__body {
@@ -45,88 +69,112 @@
     }
   }
 
-  &__banner {
-    display: flex;
-  }
-
   &__title {
-    margin-bottom: 16px;
+    margin-top: 34px;
+    width: max-content;
 
-    span:first-child::first-letter {
-      text-transform: uppercase;
-    }
-  }
-
-  &__label {
-    display: flex;
-  }
-
-  &__image {
-    position: absolute;
-    top: 20px;
-    right: 88px;
-
-    align-self: center;
-
-    @include desktop {
-      max-width: 50%;
-      height: auto;
-    }
-
-    @include mobile {
-      max-width: 165px;
-    }
-  }
-
-  &__title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    
     display: flex;
     flex-direction: column;
     align-items: start;
+    
+    span:first-child::first-letter {
+      text-transform: uppercase;
+    }
 
     @include mobile {
       grid-column: -1 / 1;
     }
   }
 
-  &__link {
-    --serviceCardLinkIconColor: var(--color-accent);
+  &__banner {
+    width: max-content;
+    
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: end;
 
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    column-gap: 15px;
-    font-size: 20px;
+    gap: 8px;
 
-    @include hover {
-      opacity: 0.7;
-    }
+  }
+
+  &__label {
+    padding: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-small);
+    color: var(--color-dark-gray);
+  }
+
+  &__count {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 232px;
+    aspect-ratio: 1;
+
+    grid-column: 2/4;
+    grid-row: 1/3;
+    align-self: end;
 
     @include mobile {
-      align-self: end;
+      max-width: 165px;
+    }
+  }
+
+  &__button {
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+    color: var(--color-accent);
+  }
+
+  &__link {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    justify-self: end;
+
+    font-size: 20px;
+
+    & svg path {
+      stroke: var(--color-light);
+
+      &:nth-child(n + 2) {
+        stroke: var(--color-accent);
+      }
+    }
+
+    @include hover {
+      opacity: 0.6;
     }
 
     &--light {
-      --serviceCardLinkIconColor: var(--color-dark);
-
       color: var(--color-light);
     }
 
-    &-icon-wrapper {
-      @include flex-center;
-      // @include square(41px);
+    // &-icon-wrapper {
+    //   @include flex-center;
+    //   @include square(41px);
 
-      // background-color: currentColor;
-      // border-radius: 50%;
+    //   background-color: currentColor;
+    //   border-radius: 50%;
 
-      svg {
-        color: var(--serviceCardLinkIconColor);
-      }
-    }
-
-    &-label {
-      @include mobile {
-        @include visually-hidden;
-      }
-    }
+    //   svg {
+    //     color: var(--serviceCardLinkIconColor);
+    //   }
+    // }
   }
 }
