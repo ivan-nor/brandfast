@@ -8,6 +8,7 @@
   &__header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     column-gap: 40px;
 
     @include mobile {
@@ -23,6 +24,14 @@
         margin-bottom: 40px;
       }
     }
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__title::first-letter {
+    text-transform: uppercase;
   }
 
   &__description {
