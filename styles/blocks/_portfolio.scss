@@ -1,0 +1,180 @@
+.portfolio-card {
+  min-height: 310px;
+  padding: 20px 50px 34px;
+
+  display: grid;
+  grid-template-columns: 216px 1fr auto;
+  grid-template-rows: auto 44px 52px;
+  column-gap: 14px;
+  row-gap: 16px;
+
+  background-color: var(--color-gray);
+  border: var(--border);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow);
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 27px;
+  }
+
+  &--accent-bg {
+    background-color: var(--color-accent);
+
+    .portfolio-card__button {
+      @include hover {
+        background-color: var(--color-light);
+      }
+    }
+  }
+
+  &--dark-bg {
+    background-color: var(--color-dark);
+
+    .portfolio-card__price {
+      color: var(--color-light);
+    }
+
+    .portfolio-card__button {
+      color: var(--color-dark);
+      background-color: var(--color-light);
+
+      @include hover {
+        background-color: var(--color-accent);
+      }
+    }
+
+    & .portfolio-card__link svg path {
+      fill: var(--color-light);
+      stroke: var(--color-dark);
+
+      &:nth-child(n + 2) {
+        stroke: var(--color-dark);
+      }
+    }
+  }
+
+  &__body {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    row-gap: 16px;
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__title {
+    margin-top: 34px;
+    width: max-content;
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    span:first-child::first-letter {
+      text-transform: uppercase;
+    }
+
+    @include mobile {
+      grid-column: -1 / 1;
+    }
+  }
+
+  &__banner {
+    width: max-content;
+    
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: end;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+  }
+
+  &__label {
+    padding: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-small);
+    color: var(--color-dark-gray);
+  }
+
+  &__count {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 232px;
+    aspect-ratio: 1;
+
+    grid-column: 2/4;
+    grid-row: 1/3;
+    align-self: end;
+
+    @include mobile {
+      max-width: 165px;
+    }
+  }
+
+  &__button {
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+    color: var(--color-accent);
+  }
+
+  &__link {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    justify-self: end;
+
+    font-size: 20px;
+
+    & svg path {
+      // stroke: var(--color-light);
+
+      &:nth-child(n + 2) {
+        stroke: var(--color-accent);
+      }
+    }
+
+    @include hover {
+      opacity: 0.6;
+    }
+
+    &--light {
+      color: var(--color-light);
+    }
+
+    // &-icon-wrapper {
+    //   @include flex-center;
+    //   @include square(41px);
+
+    //   background-color: currentColor;
+    //   border-radius: 50%;
+
+    //   svg {
+    //     color: var(--portfolioCardLinkIconColor);
+    //   }
+    // }
+  }
+}
