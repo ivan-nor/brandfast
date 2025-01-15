@@ -150,7 +150,7 @@
     font-size: 20px;
 
     & svg path {
-      stroke: var(--color-light);
+      // stroke: var(--color-light);
 
       &:nth-child(n + 2) {
         stroke: var(--color-accent);
