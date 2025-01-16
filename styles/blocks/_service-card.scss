@@ -9,7 +9,7 @@
   row-gap: 16px;
 
   background-color: var(--color-gray);
-  border: var(--border);
+  outline: var(--border);
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
 
@@ -31,6 +31,11 @@
 
   &--dark-bg {
     background-color: var(--color-dark);
+    border-top: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+    border-bottom: none;
+    outline: var(--border-light);
 
     .service-card__price {
       color: var(--color-light);

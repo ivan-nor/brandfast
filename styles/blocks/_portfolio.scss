@@ -1,15 +1,9 @@
 .portfolio-card {
-  min-height: 310px;
-  padding: 20px 50px 34px;
-
-  display: grid;
-  grid-template-columns: 216px 1fr auto;
-  grid-template-rows: auto 44px 52px;
-  column-gap: 14px;
-  row-gap: 16px;
+  display: flex;
+  flex-direction: column;
 
   background-color: var(--color-gray);
-  border: var(--border);
+  outline: var(--border);
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
 
@@ -31,36 +25,29 @@
 
   &--dark-bg {
     background-color: var(--color-dark);
+    color: var(--color-light);
+    border-top: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+    border-bottom: none;
+    outline: var(--border-light);
 
-    .portfolio-card__price {
-      color: var(--color-light);
-    }
-
-    .portfolio-card__button {
-      color: var(--color-dark);
-      background-color: var(--color-light);
-
-      @include hover {
-        background-color: var(--color-accent);
-      }
-    }
-
-    & .portfolio-card__link svg path {
-      fill: var(--color-light);
-      stroke: var(--color-dark);
+    .portfolio-card__link svg path {
+      stroke: var(--color-light);
 
       &:nth-child(n + 2) {
-        stroke: var(--color-dark);
+        stroke: var(--color-light);
       }
     }
   }
 
   &__body {
+    padding: 0 32px 32px;
     width: 100%;
 
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    gap: 24px;
 
     row-gap: 16px;
 
@@ -70,11 +57,7 @@
   }
 
   &__title {
-    margin-top: 34px;
     width: max-content;
-
-    grid-column: 1/2;
-    grid-row: 1/2;
     
     display: flex;
     flex-direction: column;
@@ -83,98 +66,51 @@
     span:first-child::first-letter {
       text-transform: uppercase;
     }
-
-    @include mobile {
-      grid-column: -1 / 1;
-    }
-  }
-
-  &__banner {
-    width: max-content;
-    
-    grid-column: 1/2;
-    grid-row: 2/3;
-    align-self: end;
-
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-  }
-
-  &__label {
-    padding: 8px;
-
-    display: flex;
-    align-items: center;
-    gap: 2px;
-
-    background-color: var(--color-light);
-    border-radius: var(--border-radius-small);
-    color: var(--color-dark-gray);
-  }
-
-  &__count {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: -0.1px;
   }
 
   &__image {
-    width: 100%;
-    max-width: 232px;
-    aspect-ratio: 1;
+    margin-bottom: 24px;
+    max-height: 194px;
 
-    grid-column: 2/4;
-    grid-row: 1/3;
-    align-self: end;
+    img {
+      max-height: 194px;
+      width: 100%;
+      aspect-ratio: 1;
+
+      border-top-left-radius: var(--border-radius-large);
+      border-top-right-radius: var(--border-radius-large);
+
+      object-fit: cover;
+      object-position: center;
+    }
 
     @include mobile {
       max-width: 165px;
     }
   }
 
-  &__button {
-    grid-column: 1/2;
-    grid-row: 3/4;
-
-    color: var(--color-accent);
-  }
-
   &__link {
-    grid-column: 3/4;
-    grid-row: 3/4;
-    justify-self: end;
+    width: max-content;
+    display: flex;
+    gap: 8px;
 
     font-size: 20px;
-
-    & svg path {
-      // stroke: var(--color-light);
-
-      &:nth-child(n + 2) {
-        stroke: var(--color-accent);
-      }
-    }
+    line-height: 28px;
 
     @include hover {
       opacity: 0.6;
     }
 
-    &--light {
-      color: var(--color-light);
+    span::first-letter {
+      text-transform: uppercase;
     }
 
-    // &-icon-wrapper {
-    //   @include flex-center;
-    //   @include square(41px);
+    &--light {
+      color: var(--color-light);
 
-    //   background-color: currentColor;
-    //   border-radius: 50%;
-
-    //   svg {
-    //     color: var(--portfolioCardLinkIconColor);
-    //   }
-    // }
+      svg path {
+        fill: var(--color-light);
+      }
+    }
   }
 }
