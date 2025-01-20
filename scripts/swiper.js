@@ -1,9 +1,9 @@
 const reviewsSwiper = new Swiper('.reviews__slider', {
   loop: true,
   slidesPerView: 3,
-  width: 600,
-  spaceBetween: 0,
-  autoHeight: true,
+  width: 606,
+  spaceBetween: 50,
+  // autoHeight: true,
   centeredSlides: true,
   // breakpoints: {
   //   980: {
@@ -13,13 +13,14 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
   //     width: 560,
   //   }
   // },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
 });
-reviewsSwiper.on('')
+
+const reviewsNext = document.querySelector('.reviews__arrow-button-next')
+const reviewsPrev = document.querySelector('.reviews__arrow-button-prev')
+reviewsNext.addEventListener('click', () => reviewsSwiper.slideNext(400))
+reviewsPrev.addEventListener('click', () => reviewsSwiper.slidePrev(400))
+
