@@ -14,7 +14,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: 100%;
+    left: 101%;
     translate: -50% -50%;
     height: calc(100% - var(--contactUsImageOffsetY) * 2);
     aspect-ratio: 1;
@@ -24,6 +24,23 @@
 
     @include tablet {
       display: none;
+    }
+  }
+
+  .section__header {
+    margin-bottom: 40px;
+    max-width: 490px;
+
+    flex-direction: column;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .section__description {
+    text-align: start;
+
+    span {
+      color: var(--color-accent);
     }
   }
 
@@ -57,12 +74,13 @@
     }
 
     @include mobile-above {
-      row-gap: 40px;
+      row-gap: 16px;
     }
   }
 
   &__body {
-    row-gap: 25px;
+    row-gap: 24px;
+    margin-bottom: 24px;
 
     @include mobile {
       row-gap: 20px;
@@ -74,5 +92,22 @@
         var(--border-radius-large)
         var(--border-radius-large);
     }
+  }
+
+  &__accept {
+    display: flex;
+    gap: 12px;
+
+    &-description {
+      max-width: 450px;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__button {
+    @include first-letter-uppercase;
   }
 }
