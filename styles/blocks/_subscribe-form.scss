@@ -1,9 +1,9 @@
 .subscribe-form {
   display: flex;
   column-gap: 20px;
-  padding: 58px 40px;
-  background-color: var(--color-dark-alt);
-  border-radius: var(--border-radius);
+  padding: 32px;
+  // background-color: var(--color-dark-alt);
+  // border-radius: var(--border-radius);
 
   @include desktop {
     flex-direction: column;
@@ -11,5 +11,9 @@
     width: 100%;
     max-width: 450px;
     padding: 30px;
+  }
+
+  &__button {
+    @include first-letter-uppercase;
   }
 }

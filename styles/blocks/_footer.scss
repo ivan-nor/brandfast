@@ -58,12 +58,20 @@
 
     &-link {
       display: inline-flex;
-      align-items: center;
+      // align-items: center;
       height: 30px;
       text-decoration: underline;
 
+      & svg path {
+        fill: var(--color-light);
+      }
+
       @include hover {
         color: var(--color-accent);
+
+        & svg path {
+          fill: var(--color-accent);
+        }
       }
     }
   }
@@ -102,6 +110,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    justify-content: end;
     row-gap: 27px;
 
     @include mobile {
@@ -110,7 +119,10 @@
     }
 
     &-title {
-      color: var(--color-dark);
+      @include first-letter-uppercase;
+
+      font-weight: bold;
+      color: var(--color-light);
     }
 
     &-body {
@@ -130,6 +142,7 @@
 
   &__extra {
     display: flex;
+    align-items: center;
     column-gap: 40px;
 
     @include mobile {
@@ -146,8 +159,14 @@
   &__privacy-policy-link {
     text-decoration: underline;
 
+    @include first-letter-uppercase;
+
     @include hover {
       color: var(--color-accent);
     }
+  }
+
+  &__callback {
+    
   }
 }

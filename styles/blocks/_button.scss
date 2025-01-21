@@ -28,6 +28,17 @@
     @include hover {
       color: var(--color-accent);
       background-color: var(--color-dark);
+      border: var(--border-accent);
+    }
+  }
+
+  &--light {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+
+    @include hover {
+      color: var(--color-dark);
+      background-color: var(--color-accent);
     }
   }
 }
