@@ -3,7 +3,7 @@
   --fieldInputTextColor: var(--color-dark);
   --fieldInputBgColor: var(--color-light);
   --fieldInputBorderColor: var(--color-dark);
-  --fieldInputPlaceholderColor: var(--color-dark-alt);
+  --fieldInputPlaceholderColor: var(--color-dark-grey);
   --fieldInputHoverBgColor: var(--color-accent);
 
   display: flex;
@@ -34,7 +34,7 @@
   &__input {
     width: 100%;
     height: var(--fieldInputHeight);
-    padding-inline: 30px;
+    padding-inline: 16px;
     color: var(--fieldInputTextColor);
     background-color: var(--fieldInputBgColor);
     border: 1px solid var(--fieldInputBorderColor);

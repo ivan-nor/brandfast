@@ -52,3 +52,13 @@
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
 }
+
+@mixin first-letter-uppercase {
+  & {
+    display: inline-block;
+  }
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
