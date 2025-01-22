@@ -25,3 +25,19 @@ const calcSubmenuWidth = (submenu) => {
   submenu.style.maxWidth = `${submenuWidth}px`
   submenu.style.width = `${submenuWidth}px`
 }
+
+// FOOTER DROPDOWN
+const footerItems = document.querySelectorAll('.footer__menu-item:has(.footer__submenu-list)')
+for (const item of footerItems) {
+  const submenu = item.querySelector('.footer__submenu-list')
+  const dropdownIcon = item.querySelector('svg');
+
+  item.addEventListener('mouseover', () => {
+    dropdownIcon.classList.add('rotate-180')
+    submenu.classList.remove('hidden')
+  })
+  item.addEventListener('mouseleave', () => {
+    dropdownIcon.classList.remove('rotate-180')
+    submenu.classList.add('hidden')
+  })
+}

@@ -53,12 +53,18 @@
   overflow: hidden !important;
 }
 
-@mixin first-letter-uppercase {
-  & {
-    display: inline-block;
-  }
+@mixin first-letter-uppercase($span: false) {
+  @if $span {
+    & span::first-letter {
+      text-transform: uppercase;
+    }
+  } @else  {
+    & {
+      display: inline-block;
+    }
 
-  &::first-letter {
-    text-transform: uppercase;
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
 }
