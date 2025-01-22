@@ -111,7 +111,58 @@
   </header>
 
   <main>
-    
+    <section class="section container"><!-- CART -->
+      <header class="section__header">
+        <h1 class="section__title visually-hidden">корзина</h1>
+      </header>
+      <div class="section__body">
+        <div class="cart">
+          <div class="cart__inner">
+            <h2 class="cart__title">ваша корзина</h2>
+            <div class="cart__header">
+              <ul class="cart__header-list">
+                <li class="cart__header-item">продукт</li>
+                <li class="cart__header-item">цена</li>
+                <li class="cart__header-item">количество</li>
+                <li class="cart__header-item">итоговая цена</li>
+              </ul>
+            </div>
+            <ul class="cart__list">
+              <li class="cart__item">
+                <h3 class="cart__product-title puddle-bg">нейминг</h3>
+                <div class="cart__product-label">
+                  <span>5x</span>
+                  <img src="./images/icons/coffee.svg" alt="" class="cart__product-label-icon">
+                </div>
+                <div class="cart__product-counter">
+                  <button class="cart__product-counter-decrease">-</button>
+                  <span>0</span>
+                  <button class="cart__product-counter-increase">+</button>
+                </div>
+                <span class="cart__product-price">2 000 ₽</span>
+                <button class="cart__product-button">х</button>
+              </li>
+              <li class="cart__item">
+                <h3 class="cart__product-title puddle-bg">фирменный стиль</h3>
+                <div class="cart__product-label">
+                  <span>5x</span>
+                  <img src="./images/icons/coffee.svg" alt="" class="cart__product-label-icon">
+                </div>
+                <div class="cart__product-counter">
+                  <button class="cart__product-counter-decrease">-</button>
+                  <span>0</span>
+                  <button class="cart__product-counter-increase">+</button>
+                </div>
+                <span class="cart__product-price">2 000 ₽</span>
+                <button class="cart__product-button">х</button>
+              </li>
+            </ul>
+            <button class="cart__button button button--transparent">Вернуться в магазин</button>
+          </div>
+          <div class="total total--accent"></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer container">
@@ -178,7 +229,7 @@
                 <span class="visually-hidden">LinkedIn</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.22154 15.0586H4.30565V5.07422H1.22154V15.0586Z" fill="#1A1A1A"/>
-                  <path d="M0.941162 1.88672C0.941162 2.87109 1.73555 3.66797 2.76359 3.66797C3.7449 3.66797 4.53929 2.87109 4.53929 1.88672C4.53929 0.902344 3.7449 0.0585938 2.76359 0.0585938C1.73555 0.0585938 0.941162 0.902344 0.941162 1.88672Z" fill="#1A1A1A"/>
+                  <path d="M0.941162 1.88672C0.941162 2.87109 1.73555 3.667972.76359 3.66797C3.7449 3.66797 4.53929 2.87109 4.53929 1.88672C4.53929 0.902344 3.7449 0.0585938 2.76359 0.0585938C1.73555 0.0585938 0.941162 0.902344 0.941162 1.88672Z" fill="#1A1A1A"/>
                   <path d="M12.8103 15.0586H15.9412V9.57422C15.9412 6.90234 15.3337 4.79297 12.2028 4.79297C10.7075 4.79297 9.67948 5.63672 9.25892 6.43359H9.21219V5.07422H6.26826V15.0586H9.35238V10.1367C9.35238 8.82422 9.58602 7.55859 11.2215 7.55859C12.8103 7.55859 12.8103 9.05859 12.8103 10.1836V15.0586Z" fill="#1A1A1A"/>
                 </svg>
               </a>
@@ -208,7 +259,7 @@
               </a>
             </li>
             <li class="soc1als__item">
-              <a class="soc1als__link" href="/">
+              <a class="soc1als__link" href="/"> 
                 <span class="visually-hidden">Telegram</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.87502 10.537L13.8998 16.7188C13.9811 16.7903 14.0795 16.8395 14.1855 16.8615C14.2916 16.8836 14.4015 16.8777 14.5045 16.8445C14.6075 16.8112 14.7002 16.7518 14.7734 16.672C14.8465 16.5922 14.8977 16.4948 14.9219 16.3892L17.8605 3.56637C17.8859 3.4555 17.8805 3.3398 17.8451 3.23174C17.8096 3.12368 17.7453 3.02735 17.6591 2.95314C17.5729 2.87892 17.4681 2.82963 17.3559 2.81059C17.2438 2.79154 17.1286 2.80345 17.0227 2.84504L2.60423 8.50945C2.47857 8.55882 2.37227 8.64755 2.30125 8.76236C2.23022 8.87718 2.19828 9.01191 2.21021 9.14639C2.22214 9.28087 2.27729 9.40788 2.36742 9.5084C2.45755 9.60892 2.5778 9.67755 2.71019 9.70403L6.87502 10.537Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
