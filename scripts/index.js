@@ -41,3 +41,16 @@ for (const item of footerItems) {
     submenu.classList.add('hidden')
   })
 }
+
+// ВЫЧИСЛЕНИЕ ОТСТУПА MAIN
+window.addEventListener('load', updateMainMargin);
+window.addEventListener('resize', updateMainMargin);
+console.log('MAIN');
+function updateMainMargin() {
+  // dropdownMenuElement.classList.add('mobile-hidden')
+  // dropdownCloseButton.classList.add('hide')
+  // dropdownOpenButton.classList.remove('hide')
+  const headerHeight = document.querySelector('header').offsetHeight;
+  const paddingHeight = headerHeight
+  document.querySelector('main').style.paddingTop = `${paddingHeight}px`;
+}
