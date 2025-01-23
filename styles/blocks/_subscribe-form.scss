@@ -2,8 +2,8 @@
   display: flex;
   column-gap: 20px;
   padding: 32px;
-  // background-color: var(--color-dark-alt);
-  // border-radius: var(--border-radius);
+  background-color: var(--color-dark-alt);
+  border-radius: var(--border-radius);
 
   @include desktop {
     flex-direction: column;

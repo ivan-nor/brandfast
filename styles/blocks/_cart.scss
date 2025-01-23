@@ -1,34 +1,159 @@
 .cart {
+  --nameWidth: 300px;
+  --priceWidth: 100px;
+  --counterWidth: 164px;
+  --totalPriceWidth: 100px;
+  --deleteButtonWidth: 24px;
+
+  display: flex;
+  gap: 40px;
+
+  &__title {
+    @include first-letter-uppercase;
+
+    padding: 20px 24px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
   &__inner {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(4, auto);
-    row-gap: 24px;
-    column-gap: 24px;
+    display: flex;
+    flex-direction: column;
+
+    flex: 2;
+
+    border: var(--border);
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+  }
+
+  &__total {
+    flex: 1;
   }
 
   &__header {
-    grid-column: 1/6;
-    grid-row: 2/3;
+    padding: 10px 24px;
+    
+    &-list {
+      display: flex;
+      gap: 20px;
+    }
 
+    &-item {
+      @include first-letter-uppercase;
+      white-space: nowrap;
+      color: var(--color-dark-gray);
+      font-weight: 500;
+      font-size: 14px;
+    }
+    
+    &-item:nth-child(1) {
+      flex: 0 var(--nameWidth);
+    }
+    &-item:nth-child(2) {
+      flex: 0 0 var(--priceWidth);
+    }
+    &-item:nth-child(3) {
+      flex: 0 0 var(--counterWidth);
+    }
+    &-item:nth-child(4) {
+      flex: 0 0 var(--totalPriceWidth);
+    }
+    &-item:nth-child(5) {
+      flex: 0 0 var(--deleteButtonWidth);
+    }
+  }
+
+  
+  &__list {
+    // grid-column: 1/6;
+    // grid-row: 3/4;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    border-top: var(--border);
+    border-bottom: var(--border);
+  }
+  
+  &__item {
     // display: grid;
     // grid-template-columns: repeat(5, auto);
     // grid-template-rows: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
   }
 
-  &__list {
-    grid-column: 1/6;
-    grid-row: 3/4;
+  &__item > :nth-child(1) {
+    flex: 0 var(--nameWidth);
+  }
+  &__item > :nth-child(2) {
+    flex: 1 0 var(--priceWidth);
+  }
+  &__item > :nth-child(3) {
+    flex: 1 0 var(--counterWidth);
+  }
+  &__item > :nth-child(4) {
+    flex: 1 0 var(--totalPriceWidth);
+  }
+  &__item > :nth-child(5) {
+    flex: 1 0 var(--deleteButtonWidth);
   }
 
-  &__item {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: auto;
+  &__product {
+    &-title {
+      @include first-letter-uppercase;
+
+      max-width: max-content;
+
+      flex-basis: var(--nameWidth);
+
+      font-size: 20px;
+    }
+
+    &-label {
+      display: flex;
+      align-items: start;
+      gap: 2px;
+    }
+
+    &-counter {
+      padding: 16px 20px;
+
+      display: flex;
+      justify-content: space-between;
+
+      border: var(--border);
+      border-radius: 16px;
+
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--color-dark-gray);
+
+      & button {
+        @include reset-button;
+
+        cursor: pointer;
+      }
+    }
+
+    &-button {
+      @include reset-button;
+
+      cursor: pointer;
+    }
   }
 
   &__button {
-    grid-column: 1/6;
-    grid-row: 4/5;
+    margin: 24px;
+    max-width: max-content;
+
+    
   }
 }

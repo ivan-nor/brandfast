@@ -112,12 +112,11 @@
 
   <main>
     <section class="section container"><!-- CART -->
-      <header class="section__header">
-        <h1 class="section__title visually-hidden">корзина</h1>
-      </header>
       <div class="section__body">
         <div class="cart">
+          <h1 class="section__title visually-hidden">корзина</h1>
           <div class="cart__inner">
+            <!-- TODO сделать два отдельных блока с флексами _flex.scss и повторить как в _grid.scss -->
             <h2 class="cart__title">ваша корзина</h2>
             <div class="cart__header">
               <ul class="cart__header-list">
@@ -125,41 +124,79 @@
                 <li class="cart__header-item">цена</li>
                 <li class="cart__header-item">количество</li>
                 <li class="cart__header-item">итоговая цена</li>
+                <li class="cart__header-item"></li>
               </ul>
             </div>
             <ul class="cart__list">
               <li class="cart__item">
-                <h3 class="cart__product-title puddle-bg">нейминг</h3>
+                <div class="cart__item-title">
+                  <h3 class="cart__product-title puddle-bg">нейминг</h3>
+                </div>
                 <div class="cart__product-label">
                   <span>5x</span>
-                  <img src="./images/icons/coffee.svg" alt="" class="cart__product-label-icon">
+                  <img src="./images/icons/coffee.svg" alt="" class="cart__product-label-icon" width="24" height="24">
                 </div>
                 <div class="cart__product-counter">
-                  <button class="cart__product-counter-decrease">-</button>
-                  <span>0</span>
-                  <button class="cart__product-counter-increase">+</button>
+                  <button class="cart__product-counter-decrease">
+                    <img src="./images/icons/minus.svg" alt="" width="16" height="16">
+                  </button>
+                  <span>01</span>
+                  <button class="cart__product-counter-increase">
+                    <img src="./images/icons/plus.svg" alt="" width="16" height="16">
+                  </button>
                 </div>
                 <span class="cart__product-price">2 000 ₽</span>
-                <button class="cart__product-button">х</button>
+                <button class="cart__product-button">
+                  <img src="./images/icons/x-circle.svg" alt="" width="24" height="24">
+                </button>
               </li>
               <li class="cart__item">
-                <h3 class="cart__product-title puddle-bg">фирменный стиль</h3>
+                <div class="cart__item-title">
+                  <h3 class="cart__product-title puddle-bg">фирменный стиль</h3>
+                </div>
                 <div class="cart__product-label">
                   <span>5x</span>
-                  <img src="./images/icons/coffee.svg" alt="" class="cart__product-label-icon">
+                  <img src="./images/icons/coffee.svg" alt="" class="cart__product-label-icon" width="24" height="24">
                 </div>
                 <div class="cart__product-counter">
-                  <button class="cart__product-counter-decrease">-</button>
-                  <span>0</span>
-                  <button class="cart__product-counter-increase">+</button>
+                  <button class="cart__product-counter-decrease">
+                    <img src="./images/icons/minus.svg" alt="" width="16" height="16">
+                  </button>
+                  <span>01</span>
+                  <button class="cart__product-counter-increase">
+                    <img src="./images/icons/plus.svg" alt="" width="16" height="16">
+                  </button>
                 </div>
                 <span class="cart__product-price">2 000 ₽</span>
-                <button class="cart__product-button">х</button>
+                <button class="cart__product-button">
+                  <img src="./images/icons/x-circle.svg" alt="" width="24" height="24">
+                </button>
               </li>
             </ul>
             <button class="cart__button button button--transparent">Вернуться в магазин</button>
           </div>
-          <div class="total total--accent"></div>
+          <div class="cart__total total total--dark">
+            <h3 class="total__title">итого</h3>
+            <ul class="total__list">
+              <li class="total__item">
+                <span>всего товаров</span>
+                <span>4 000 ₽</span>
+              </li>
+              <li class="total__item">
+                <span>доставка</span>
+                <span>бесплатная</span>
+              </li>
+              <li class="total__item">
+                <span>скидка</span>
+                <span>1 000 ₽</span>
+              </li>
+              
+            </ul>
+            <div class="total__all">
+              <span>итого</span>
+              <span>1 000 ₽</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -310,7 +347,5 @@
   </footer>
 
   <script type="module" src="./scripts/index.js"></script>
-  <script src="./scripts/swiper-bundle.min.js"></script>
-  <script type="module" src="./scripts/swiper.js"></script>
 </body>
 </html>

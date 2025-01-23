@@ -1,0 +1,20 @@
+.total {
+  border: var(--border);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+
+  &--dark {
+    background-color: var(--color-dark);
+    border-top: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+    border-bottom: none;
+    outline: var(--border-light);
+
+    color: var(--color-light);
+  }
+
+  &__item {
+    @include first-letter-uppercase(true);
+  }
+}
