@@ -1,4 +1,10 @@
 .total {
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
   border: var(--border);
   border-radius: 32px;
   box-shadow: var(--shadow);
@@ -13,8 +19,52 @@
 
     color: var(--color-light);
   }
+  &__title {
+    @include first-letter-uppercase;
+  
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  } 
 
   &__item {
     @include first-letter-uppercase(true);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 20px;
+
+    &:not(&:last-child) :last-child {
+      font-weight: 500;
+      line-height: 36px;
+    }
+  }
+
+  &__item:last-child {
+    margin-top: 16px;
+    padding-top: 16px;
+
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    border-top: var(--border-light);
+  }
+
+  &__button {
+    @include first-letter-uppercase;
+    @include hover {
+      color: var(--color-dark);
+      background-color: var(--color-light);
+    }
   }
 }

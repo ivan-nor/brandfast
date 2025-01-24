@@ -1,12 +1,12 @@
 .cart {
-  --nameWidth: 300px;
-  --priceWidth: 100px;
+  --nameWidth: 290px;
+  --priceWidth: 88px;
   --counterWidth: 164px;
-  --totalPriceWidth: 100px;
+  --totalPriceWidth: 74px;
   --deleteButtonWidth: 24px;
 
   display: flex;
-  gap: 40px;
+  gap: 32px;
 
   &__title {
     @include first-letter-uppercase;
@@ -14,6 +14,7 @@
     padding: 20px 24px;
     font-weight: bold;
     font-size: 20px;
+    line-height: 24px;
   }
 
   &__inner {
@@ -28,6 +29,8 @@
   }
 
   &__total {
+    max-width: 424px;
+
     flex: 1;
   }
 
@@ -69,7 +72,7 @@
     // grid-column: 1/6;
     // grid-row: 3/4;
 
-    padding: 24px;
+    padding: 16px;
 
     display: flex;
     flex-direction: column;
@@ -124,7 +127,7 @@
     }
 
     &-counter {
-      padding: 16px 20px;
+      padding: 14px 18px;
 
       display: flex;
       justify-content: space-between;
