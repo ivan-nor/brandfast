@@ -35,4 +35,66 @@
   &__button {
     @include first-letter-uppercase;
   }
+
+  &__quick {
+    display: flex;
+    align-items: start;      
+    gap: 32px;
+
+  }
+
+  &__form {
+    @include card(var(--color-gray));
+
+    padding: 24px;
+
+    flex: 64%;
+
+    &-title {
+
+
+      &:not(:first-child) {
+        border-top: var(--border);
+      }
+    }
+  }
+
+  &__payments {
+    padding: 24px;
+
+    background-color: var(--color-light);
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+  
+    &-list {
+      display: flex;
+
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      flex: 2;
+      
+      &:not(:last-child) {
+        border-right: 1px solid var(--color-gray);
+        padding-right: 3px;
+      }
+      &:not(:first-child) {
+        padding-left: 3px;
+        border-left: 1px solid var(--color-gray);
+      }
+    }
+
+    &-label {
+      padding-inline: 5px;
+      white-space: nowrap;
+    }
+  }
+
+  &__total {
+    flex: 34%;
+  }
 }

@@ -1,5 +1,6 @@
 .total {
   padding: 24px;
+  min-width: 424px;
 
   display: flex;
   flex-direction: column;
@@ -36,6 +37,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
 
     font-size: 14px;
     line-height: 20px;
@@ -43,6 +45,13 @@
     &:not(&:last-child) :last-child {
       font-weight: 500;
       line-height: 36px;
+    }
+
+    &-title {
+      @include first-letter-uppercase;
+
+      font-size: 20px;
+      color: var(--color-dark);
     }
   }
 
