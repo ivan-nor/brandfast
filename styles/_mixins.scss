@@ -68,3 +68,20 @@
     }
   }
 }
+
+@mixin card($background-color: var(--color-light), $color: var(--color-dark), $border: var(--border)) {
+  background-color: $background-color;
+  color: $color;
+  border: $border;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow);
+
+  @if $background-color == var(--color-dark) {
+    border-top: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+    border-bottom: none;
+    outline: var(--border-light);
+    color: var(--color-light);
+  }
+}

@@ -8,10 +8,7 @@
   column-gap: 14px;
   row-gap: 16px;
 
-  background-color: var(--color-gray);
-  outline: var(--border);
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--shadow);
+  @include card(var(--color-gray));
 
   @include mobile {
     display: grid;
@@ -20,7 +17,7 @@
   }
 
   &--accent-bg {
-    background-color: var(--color-accent);
+    @include card(var(--color-accent));
 
     .service-card__button {
       @include hover {
@@ -30,12 +27,7 @@
   }
 
   &--dark-bg {
-    background-color: var(--color-dark);
-    border-top: var(--border);
-    border-left: var(--border);
-    border-right: var(--border);
-    border-bottom: none;
-    outline: var(--border-light);
+    @include card(var(--color-dark));
 
     .service-card__price {
       color: var(--color-light);

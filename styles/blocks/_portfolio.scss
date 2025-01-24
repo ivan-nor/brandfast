@@ -2,10 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  background-color: var(--color-gray);
-  outline: var(--border);
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--shadow);
+  @include card(var(--color-gray));
 
   @include mobile {
     display: grid;
@@ -14,7 +11,7 @@
   }
 
   &--accent-bg {
-    background-color: var(--color-accent);
+    @include card(var(--color-accent));
 
     .portfolio-card__button {
       @include hover {
@@ -24,13 +21,7 @@
   }
 
   &--dark-bg {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    border-top: var(--border);
-    border-left: var(--border);
-    border-right: var(--border);
-    border-bottom: none;
-    outline: var(--border-light);
+    @include card(var(--color-dark));
 
     .portfolio-card__link svg path {
       stroke: var(--color-light);
