@@ -9,7 +9,7 @@
 
   &__title {
     @include first-letter-uppercase;
-    
+
     padding-bottom: 12px;
 
     font-size: 24px;
@@ -38,7 +38,7 @@
 
   &__quick {
     display: flex;
-    align-items: start;      
+    align-items: start;
     gap: 32px;
   }
 
@@ -49,12 +49,13 @@
 
     flex: 64%;
 
-    & > :not(:first-child) {
+    &> :not(:first-child) {
       padding-top: 40px;
 
       border-top: var(--border);
     }
-    & > :not(:last-child) {
+
+    &> :not(:last-child) {
       padding-bottom: 40px;
     }
 
@@ -81,13 +82,13 @@
 
     &-checkbox {
       @include first-letter-uppercase(true);
-      
-      
-      
+
+
+
       display: flex;
       align-items: center;
       gap: 12px;
-      
+
       & .field__label {
         @include fluid-text(18, 16);
       }
@@ -127,10 +128,67 @@
       white-space: nowrap;
     }
   }
-  
-
 
   &__total {
     flex: 34%;
+  }
+
+  &-track {
+    @include card;
+    // padding-inline: 24px;
+
+    // display: flex;
+    // flex-direction: column;
+    // gap: 16px;
+
+    &__header {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__title {
+      @include first-letter-uppercase;
+
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    &__description {
+      max-width: 810px;
+
+      font-size: 14px;
+      color: var(--color-dark-gray);
+    }
+
+    &__fields {
+      margin: 0;
+      padding: 24px;
+
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+
+      border-bottom: var(--border);
+    }
+
+    &__field {
+      flex: 2;
+    }
+
+    &__info {
+      padding-top: 8px;
+
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    &__button {
+      @include first-letter-uppercase;
+      margin: 24px;
+
+    }
   }
 }
