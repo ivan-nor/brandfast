@@ -8,9 +8,19 @@
 
   @include card;
 
+  &--large {
+    width: 100%;
+  }
+
   &--dark {
     @include card(var(--color-dark));
+
+    &__item:last-child {
+      border-top: var(--border-light);
+    }
   }
+
+
 
   &--accent {
     @include card(var(--color-accent));
@@ -62,7 +72,7 @@
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-    border-top: var(--border-light);
+    border-top: var(--border);
   }
 
   &__button {

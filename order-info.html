@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="icon" href="./images/icons/B.svg">
+  <title>Отследить заказ</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner container">
+      <a class="header__logo logo" href="/">
+        <img
+          class="logo__image"
+          src="./images/logo.svg"
+          alt="BrandFast logo"
+          width="220" height="48" loading="lazy"
+        />
+      </a>
+      <nav class="header__menu hidden-mobile">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="/">
+              <span>услуги</span>
+              <div class="header__submenu-icon">
+                <img src="./images/icons/arrow-dropdown.svg" alt="dropdown list icon" width="24" height="24" />
+              </div>
+            </a>
+            <!-- #TODO: переделать на клик -->
+            <ul class="header__submenu-list hidden">
+              <li class="header__submenu-item">
+                <a href="#" class="header__submenu-link"><span>разработка логотипа</span></a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#" class="header__submenu-link"><span>фирменный стиль</span></a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#" class="header__submenu-link"><span>бренд с нуля</span></a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#" class="header__submenu-link"><span>нейминг</span></a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#" class="header__submenu-link"><span>упаковка</span></a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#" class="header__submenu-link"><span>айдентика</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="/"><span>о нас</span></a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="/"><span>портфолио</span></a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="/"><span>наши партнеры и отзывы</span></a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="/"><span>новости</span></a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="/"><span>контакты</span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <ul class="header__actions-list">
+          <li class="header__actions-item">
+            <a href="/" class="header__actions-phone">88005553535</a>
+          </li>
+          <li class="header__actions-item">
+            <a href="/" class="header__actions-cart">
+              <img class="header__actions-cart-image" src="./images/shopping-cart.svg" alt="shopping cart image" width="24" height="24" />
+              <!-- #TODO: добавить количество товаров -->
+              <div class="header__actions-cart-counter"></div>
+            </a>
+          </li>
+          <li class="header__actions-item">
+            <a href="/" class="header__actions-account">A</a>
+          </li>
+        </ul>
+      </div>
+      <!-- <button
+        class="header__button button button--transparent hidden-mobile"
+        type="button"
+      >
+        Request a quote
+      </button> -->
+      <button
+        class="header__burger-button burger-button visible-mobile"
+        type="button"
+        onclick="mobileOverlay.showModal()"
+      >
+        <span class="visually-hidden">Open navigation menu</span>
+      </button>
+    </div>
+    <div class="header__breadcrumbs">
+      <div class="breadcrumbs container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">главная страница</a></li>
+          <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">отследить заказ</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container"><!-- ORDER INFO -->
+      <h1 class="section__title visually-hidden">Информация о заказе</h1>
+      <div class="section__body">
+        <div class="order-info">
+          <ul class="order-info__cards grid grid--2">
+            <li class="order-info__cards-item">
+              <article class="order-info__card order-info__card">
+                <h3 class="order-info__card__title">
+                  <span class="puddle-bg">нейминг</span>
+                </h3>
+                <div class="order-info__card__banner">
+                  <div class="order-info__card__price">2 000 ₽ =</div>
+                  <div class="order-info__card__label">
+                    <span class="order-info__card__count">5x</span>
+                    <img class="order-info__card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt="">
+                  </div>
+                </div>
+                <img class="order-info__card__image" src="./images/services/4.svg" alt="" width="210" height="170" loading="lazy">
+              </article>
+            </li>
+            <li class="order-info__cards-item">
+              <article class="order-info__card order-info__card order-info__card--accent-bg">
+                <h3 class="order-info__card__title">
+                  <span class="puddle-bg puddle-bg--light">фирменный</span>
+                  <span class="puddle-bg puddle-bg--light">стиль</span>
+                </h3>
+                <div class="order-info__card__banner">
+                  <div class="order-info__card__price">2 000 ₽ =</div>
+                  <div class="order-info__card__label">
+                    <span class="order-info__card__count">5x</span>
+                    <img class="order-info__card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt="">
+                  </div>
+                </div>
+                <img class="order-info__card__image" src="./images/services/2.svg" alt="" width="220" height="155" loading="lazy">
+              </article>
+            </li>
+          </ul>
+          <!-- TODO переделать тотал чтобы граница была на всю ширину но на темной версии паддинги ее перекрывали -->
+          <div class="order-info__total total total--large">
+              <h3 class="total__title">итого</h3>
+              <ul class="total__list">
+                <li class="total__item">
+                  <span>всего товаров</span>
+                  <span>4 000 ₽</span>
+                </li>
+                <li class="total__item">
+                  <span>доставка</span>
+                  <span>бесплатная</span>
+                </li>
+                <li class="total__item">
+                  <span>скидка</span>
+                  <span>1 000 ₽</span>
+                </li>
+                <li class="total__item">
+                  <span>всего</span>
+                  <span>3 000 ₽</span>
+                </li>
+              </ul>
+              <button class="total__button button button--accent">оформить заказ</button>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="footer__inner">
+      <div class="footer__navigation">
+        <a class="footer__logo logo" href="/">
+          <img
+            class="logo__image"
+            src="./images/logo-light.svg"
+            alt="BrandFast"
+            width="180" height="29" loading="lazy"
+          />
+        </a>
+        <nav class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/">
+                <span>услуги</span>
+                <div class="footer__submenu-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15L8 11L16 11L12 15Z" />
+                  </svg>
+                </div>
+              </a>
+              <ul class="footer__submenu-list hidden">
+                <li class="footer__submenu-item">
+                  <a href="#" class="footer__submenu-link"><span>разработка логотипа</span></a>
+                </li>
+                <li class="footer__submenu-item">
+                  <a href="#" class="footer__submenu-link"><span>фирменный стиль</span></a>
+                </li>
+                <li class="footer__submenu-item">
+                  <a href="#" class="footer__submenu-link"><span>бренд с нуля</span></a>
+                </li>
+                <li class="footer__submenu-item">
+                  <a href="#" class="footer__submenu-link"><span>нейминг</span></a>
+                </li>
+                <li class="footer__submenu-item">
+                  <a href="#" class="footer__submenu-link"><span>упаковка</span></a>
+                </li>
+                <li class="footer__submenu-item">
+                  <a href="#" class="footer__submenu-link"><span>айдентика</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/">о нас</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/">портфолио</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/">отзывы наших клиентов</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="/">новости</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__soc1als soc1als">
+          <ul class="soc1als__list">
+            <li class="soc1als__item">
+              <a class="soc1als__link" href="/">
+                <span class="visually-hidden">LinkedIn</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.22154 15.0586H4.30565V5.07422H1.22154V15.0586Z" fill="#1A1A1A"/>
+                  <path d="M0.941162 1.88672C0.941162 2.87109 1.73555 3.667972.76359 3.66797C3.7449 3.66797 4.53929 2.87109 4.53929 1.88672C4.53929 0.902344 3.7449 0.0585938 2.76359 0.0585938C1.73555 0.0585938 0.941162 0.902344 0.941162 1.88672Z" fill="#1A1A1A"/>
+                  <path d="M12.8103 15.0586H15.9412V9.57422C15.9412 6.90234 15.3337 4.79297 12.2028 4.79297C10.7075 4.79297 9.67948 5.63672 9.25892 6.43359H9.21219V5.07422H6.26826V15.0586H9.35238V10.1367C9.35238 8.82422 9.58602 7.55859 11.2215 7.55859C12.8103 7.55859 12.8103 9.05859 12.8103 10.1836V15.0586Z" fill="#1A1A1A"/>
+                </svg>
+              </a>
+            </li>
+            <li class="soc1als__item">
+              <a class="soc1als__link" href="/">
+                <span class="visually-hidden">Facebook</span>
+                <svg width="800px" height="800px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#000000">
+                      <g id="icons" transform="translate(56.000000, 160.000000)">
+                        <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" id="facebook-[#176]">
+
+                        </path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="soc1als__item">
+              <a class="soc1als__link" href="/">
+                <span class="visually-hidden">Twitter</span>
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.9961 4.4915C16.6854 3.97449 17.3058 3.35409 17.7884 2.63028C17.168 2.90602 16.4442 3.11282 15.7204 3.18176C16.4786 2.73369 17.0301 2.04435 17.3058 1.18267C16.6165 1.59628 15.8238 1.90648 15.031 2.07881C14.3417 1.35501 13.4111 0.941406 12.3771 0.941406C10.378 0.941406 8.75804 2.56135 8.75804 4.56043C8.75804 4.83617 8.79251 5.1119 8.86144 5.38764C5.86282 5.2153 3.1744 3.76769 1.38212 1.59628C1.07192 2.11328 0.899586 2.73369 0.899586 3.42302C0.899586 4.66383 1.51999 5.76677 2.51953 6.42165C1.93359 6.38718 1.34766 6.24931 0.86512 5.97358V6.00804C0.86512 7.76585 2.10593 9.21346 3.76034 9.55813C3.48461 9.62707 3.13994 9.696 2.82973 9.696C2.58847 9.696 2.38166 9.66154 2.1404 9.62707C2.58847 11.0747 3.93267 12.1087 5.51815 12.1432C4.27734 13.1082 2.72633 13.6942 1.03745 13.6942C0.727252 13.6942 0.451517 13.6597 0.175781 13.6252C1.76126 14.6592 3.65694 15.2452 5.72495 15.2452C12.3771 15.2452 15.9961 9.76494 15.9961 4.97403C15.9961 4.8017 15.9961 4.66383 15.9961 4.4915Z" fill="black"/>
+                </svg>
+              </a>
+            </li>
+            <li class="soc1als__item">
+              <a class="soc1als__link" href="/"> 
+                <span class="visually-hidden">Telegram</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.87502 10.537L13.8998 16.7188C13.9811 16.7903 14.0795 16.8395 14.1855 16.8615C14.2916 16.8836 14.4015 16.8777 14.5045 16.8445C14.6075 16.8112 14.7002 16.7518 14.7734 16.672C14.8465 16.5922 14.8977 16.4948 14.9219 16.3892L17.8605 3.56637C17.8859 3.4555 17.8805 3.3398 17.8451 3.23174C17.8096 3.12368 17.7453 3.02735 17.6591 2.95314C17.5729 2.87892 17.4681 2.82963 17.3559 2.81059C17.2438 2.79154 17.1286 2.80345 17.0227 2.84504L2.60423 8.50945C2.47857 8.55882 2.37227 8.64755 2.30125 8.76236C2.23022 8.87718 2.19828 9.01191 2.21021 9.14639C2.22214 9.28087 2.27729 9.40788 2.36742 9.5084C2.45755 9.60892 2.5778 9.67755 2.71019 9.70403L6.87502 10.537Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6.875 10.5369L17.5088 2.85693" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10.3834 13.6245L7.94194 16.0659C7.85453 16.1533 7.74317 16.2128 7.62193 16.2369C7.50069 16.2611 7.37503 16.2487 7.26082 16.2014C7.14662 16.1541 7.04901 16.074 6.98033 15.9712C6.91166 15.8684 6.875 15.7476 6.875 15.624V10.5371" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__body">
+        <div class="footer__contacts">
+          <h2 class="footer__contacts-title h4">наши контакты:</h2>
+          <address class="footer__contacts-body">
+            <p>Email: <a href="mailto:info@brandfast.com">info@brandfast.com</a></p>
+            <p>Phone: <a href="tel:88008888888">8 800 888 88 88</a></p>
+          </address>
+        </div>
+        <form class="footer__subscribe-form subscribe-form">
+          <h2 class="visually-hidden">Подписаться на новости</h2>
+          <div class="subscribe-form__field field field--big-height field--dark-bg">
+            <label class="field__label visually-hidden" for="subscribe-email">Email</label>
+            <input
+              class="field__input"
+              id="subscribe-email"
+              name="email"
+              placeholder="Email"
+              type="email"
+              required
+            />
+          </div>
+          <button
+            class="subscribe-form__button button button--accent"
+            type="submit"
+          >
+          подписаться на новости
+          </button>
+        </form>
+      </div>
+      <div class="footer__extra">
+        <p class="footer__copyright">© <time datetime="2025">2025</time> BrandFast</p>
+        <p class="footer__ip">ИП: Иванов И.И.<br>ОГРН: 12345678</p>
+        <a class="footer__privacy-policy-link" href="https://kaltmann.ru/policy" target="_blank">политика конфиденциальности</a>
+        <button class="footer__callback button button--light" type="button">заказать обратный звонок</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./scripts/index.js"></script>
+</body>
+</html>
