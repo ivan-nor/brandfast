@@ -1,4 +1,16 @@
 .radios {
   display: flex;
-  column-gap: 35px;
+  // column-gap: 35px;
+
+  &__item {
+    @include first-letter-uppercase(true);
+
+    padding-inline: 3px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    cursor: pointer;
+  };
 }

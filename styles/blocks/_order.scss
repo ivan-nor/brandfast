@@ -40,7 +40,6 @@
     display: flex;
     align-items: start;      
     gap: 32px;
-
   }
 
   &__form {
@@ -50,11 +49,47 @@
 
     flex: 64%;
 
+    & > :not(:first-child) {
+      padding-top: 40px;
+
+      border-top: var(--border);
+    }
+    & > :not(:last-child) {
+      padding-bottom: 40px;
+    }
+
+    &-inner {
+      gap: 16px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      & .grid {
+        gap: 16px;
+      }
+    }
+
     &-title {
+      @include first-letter-uppercase;
 
+      grid-column: 1/3;
 
-      &:not(:first-child) {
-        border-top: var(--border);
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    &-checkbox {
+      @include first-letter-uppercase(true);
+      
+      
+      
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      
+      & .field__label {
+        @include fluid-text(18, 16);
       }
     }
   }
@@ -62,37 +97,38 @@
   &__payments {
     padding: 24px;
 
+    justify-content: space-between;
+
     background-color: var(--color-light);
     border: var(--border);
     border-radius: var(--border-radius-large);
-  
-    &-list {
-      display: flex;
 
-    }
+    &-radio {
+      flex: 2;
 
-    &-item {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      gap: 8px;
 
-      flex: 2;
-      
       &:not(:last-child) {
         border-right: 1px solid var(--color-gray);
         padding-right: 3px;
       }
-      &:not(:first-child) {
+
+      &:not(:nth-child(2)) {
         padding-left: 3px;
         border-left: 1px solid var(--color-gray);
       }
     }
 
     &-label {
+      padding-bottom: 8px;
       padding-inline: 5px;
       white-space: nowrap;
     }
   }
+  
+
 
   &__total {
     flex: 34%;

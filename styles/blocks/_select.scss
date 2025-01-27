@@ -1,0 +1,25 @@
+.select {
+  appearance: none;
+  padding: 20px;
+  border-radius: var(--border-radius);
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: url('../../images/icons/caret-down-gray.svg');
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      // background-image: url('../../images/icons/arrow-dropdown.svg');
+      // bottom: 0;
+      // margin-top: -2px;
+      pointer-events: none;
+    }
+  }
+}
+

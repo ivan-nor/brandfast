@@ -108,82 +108,165 @@
 
   <main>
     <section class="section container"><!-- ORDER QUICK -->
+      <!-- #TODO: добавить красивый ввод номера карты -->
       <h1 class="section__title visually-hidden">Оформить заказ</h1>
       <div class="section__body">
         <div class="order__quick">
-          <form class="order__form form">
-            <h2 class="order__form-title">заполните форму</h2>
-            <div class="order__form-inner grid grid--3">
-              <div class="order__form-field field field--big-height">
-                <label class="field__label visually-hidden" for="order-email">Email</label>
-                <input class="field__input" id="order-email" name="email" placeholder="Email" type="email" required />
+          <form class="order__form form" autocomplete>
+            <div class="order__form-inner">
+              <h2 class="order__form-title">заполните форму</h2>
+              <div class="grid grid--3">
+                <div class="order__form-field field">
+                  <label class="field__label visually-hidden" for="order-name">имя</label>
+                  <input class="field__input" id="order-name" name="name" placeholder="Имя*" type="text" required />
+                </div>
+                <div class="order__form-field field">
+                  <label class="field__label visually-hidden" for="order-surname">фамилия</label>
+                  <input class="field__input" id="order-surname" name="surname" placeholder="Фамилия*" type="text" required />
+                </div>
+                <div class="order__form-field field">
+                  <label class="field__label visually-hidden" for="order-company">название компании</label>
+                  <input class="field__input" id="order-company" name="company" placeholder="Название компании" type="text" required />
+                </div>
+                <div class="order__form-field field">
+                  <label class="field__label" for="order-city">город</label>
+                  <div class="select__wrapper ">
+                    <select class="select field field__input" name="order-city" id="order-city" autocomplete>
+                      <option value="">Выберите город</option>
+                      <option value="moscow">Москва</option>
+                      <option value="petersburg">Санкт-Петербург</option>
+                      <option value="samara">Самара</option>
+                      <option value="perm">Пермь</option>
+                      <option value="novosibirsk">Новосибирск</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="order__form-field field">
+                  <label class="field__label" for="order-email">Email</label>
+                  <input class="field__input" id="order-email" name="email" placeholder="" type="email" required />
+                </div>
+                <div class="order__form-field field">
+                  <label class="field__label" for="order-phone">номер телефона</label>
+                  <input class="field__input" id="order-phone" name="phone" placeholder="" type="tel" required />
+                </div>
               </div>
-              <div class="order__form-field field field--big-height">
-                <label class="field__label visually-hidden" for="order-email">Email</label>
-                <input class="field__input" id="order-email" name="email" placeholder="Email" type="email" required />
+              <div class="order__form-checkbox">
+                <input type="checkbox" id="order-checkbox" class="checkbox__input">
+                <label class="field__label" for="order-checkbox">отправить на другой адрес</label>
               </div>
-              <div class="order__form-field field field--big-height">
-                <label class="field__label visually-hidden" for="order-email">Email</label>
-                <input class="field__input" id="order-email" name="email" placeholder="Email" type="email" required />
-              </div>
-              <div class="order__form-field field field--big-height">
-                <label class="field__label" for="order-email">Email</label>
-                <input class="field__input" id="order-email" name="email" placeholder="Email" type="email" required />
-              </div>
-              <div class="order__form-field field field--big-height">
-                <label class="field__label" for="order-email">Email</label>
-                <input class="field__input" id="order-email" name="email" placeholder="Email" type="email" required />
-              </div>
-              <div class="order__form-field field field--big-height">
-                <label class="field__label" for="order-email">Email</label>
-                <input class="field__input" id="order-email" name="email" placeholder="Email" type="email" required />
-              </div>
-            </div>
-            <div class="order__form-checkbox">
-              <input type="checkbox" id="order-checkbox" class="checkbox__input">
-              <label for="order-checkbox">отправить на другой адрес</label>
             </div>
 
-            <h2 class="order__form-title">способы оплаты</h2>
-            <div class="order__payments">
-              <ul class="order__payments-list">
-                <li class="order__payments-item">
-                  <img src="./images/payments/dollar.svg" alt="" class="order__payments-item-image" width="32" height="32">
-                  <label for="payments-cash" class="order__payments-label">наличными</label>
-                  <input type="radio" class="field field--radio radio" id="payments-cash" name="payments-radio">
-                </li>
-                <li class="order__payments-item">
-                  <img src="./images/payments/venmo.svg" alt="" class="order__payments-item-image" width="32" height="32">
-                  <label for="payments-venmo" class="order__payments-label">venmo</label>
-                  <input type="radio" class="field field--radio radio" id="payments-venmo" name="payments-radio">
-                </li>
-                <li class="order__payments-item">
-                  <img src="./images/payments/paypal.svg" alt="" class="order__payments-item-image" width="32" height="32">
-                  <label for="payments-paypal" class="order__payments-label">amazon pay</label>
-                  <input type="radio" class="field field--radio radio" id="payments-amazon-pay" name="payments-radio">
-                </li>
-                <li class="order__payments-item">
-                  <img src="./images/payments/amazon.svg" alt="" class="order__payments-item-image" width="32" height="32">
-                  <label for="payments-card" class="order__payments-label">картой</label>
-                  <input type="radio" class="field field--radio radio" id="payments-card" name="payments-radio">
-                </li>
-                <li class="order__payments-item">
-                  <img src="./images/payments/hourglass.svg" alt="" class="order__payments-item-image" width="32" height="32">
-                  <label for="payments-instalment" class="order__payments-label">рассрочка</label>
-                  <input type="radio" class="field field--radio radio" id="payments-instalment" name="payments-radio">
-                </li>
-                <li class="order__payments-item">
-                  <img src="./images/payments/chart-pie-slice.svg" alt="" class="order__payments-item-image" width="32" height="32">
-                  <label for="payments-dolyami" class="order__payments-label">долями</label>
-                  <input type="radio" class="field field--radio radio" id="payments-dolyami" name="payments-radio">
-                </li>
-              </ul>
+            <div class="order__form-inner">
+              <h2 class="order__form-title">способы оплаты</h2>
+                <fieldset class="order__payments radios">
+                  <legend class="radios__title visually-hidden">payments</legend>
+                  <label class="order__payments-radio radios__item radio">
+                    <img src="./images/payments/dollar.svg" alt="" class="order__payments-item-image" width="32" height="32">
+                    <span class="radio__label">наличными</span>
+                    <input
+                      class="radio__input visually-hidden"
+                      name="payments"
+                      type="radio"
+                      value="наличными"
+                    />
+                    <span class="radio__emulator"></span>
+                  </label>
+                  <label class="order__payments-radio radios__item radio">
+                    <img src="./images/payments/venmo.svg" alt="" class="order__payments-item-image" width="32" height="32">
+                    <span class="radio__label">venmo</span>
+                    <input
+                      class="radio__input visually-hidden"
+                      name="payments"
+                      type="radio"
+                      value="venmo"
+                    />
+                    <span class="radio__emulator"></span>
+                  </label>
+                  <label class="order__payments-radio radios__item radio">
+                    <img src="./images/payments/paypal.svg" alt="" class="order__payments-item-image" width="32" height="32">
+                    <span class="radio__label">paypal</span>
+                    <input
+                      class="radio__input visually-hidden"
+                      name="payments"
+                      type="radio"
+                      value="paypal"
+                    />
+                    <span class="radio__emulator"></span>
+                  </label>
+                  <label class="order__payments-radio radios__item radio">
+                    <img src="./images/payments/amazon.svg" alt="" class="order__payments-item-image" width="32" height="32">
+                    <span class="radio__label">amazon</span>
+                    <input
+                      class="radio__input visually-hidden"
+                      name="payments"
+                      type="radio"
+                      value="amazon"
+                    />
+                    <span class="radio__emulator"></span>
+                  </label>
+                  <label class="order__payments-radio radios__item radio">
+                    <img src="./images/payments/credit-card.svg" alt="" class="order__payments-item-image" width="32" height="32">
+                    <span class="radio__label">картой</span>
+                    <input
+                      class="radio__input visually-hidden"
+                      name="payments"
+                      type="radio"
+                      value="card"
+                      checked
+                    />
+                    <span class="radio__emulator"></span>
+                  </label>
+                  <label class="order__payments-radio radios__item radio">
+                    <img src="./images/payments/hourglass.svg" alt="" class="order__payments-item-image" width="32" height="32">
+                    <span class="radio__label">рассрочка</span>
+                    <input
+                      class="radio__input visually-hidden"
+                      name="payments"
+                      type="radio"
+                      value="instalment"
+                    />
+                    <span class="radio__emulator"></span>
+                  </label>
+                  <label class="order__payments-radio radios__item radio">
+                    <img src="./images/payments/chart-pie-slice.svg" alt="" class="order__payments-item-image" width="32" height="32">
+                    <span class="radio__label">долями</span>
+                    <input
+                      class="radio__input visually-hidden"
+                      name="payments"
+                      type="radio"
+                      value="dolyami"
+                    />
+                    <span class="radio__emulator"></span>
+                  </label>
+                </fieldset>
+                
+              <div class="grid grid--2">
+                <div class="order__form-field field">
+                  <label class="field__label" for="order-cardholder-name">имя держателя карты</label>
+                  <input class="field__input" id="order-cardholder-name" name="order-cardholder-name" placeholder="IVANOV IVAN" type="text" required />
+                </div>
+                <div class="order__form-field field">
+                  <label class="field__label" for="order-card-number">номер карты</label>
+                  <input class="field__input" id="order-card-number" name="order-card-number" placeholder="1234 5678 9012 3456" type="text" required />
+                </div>
+                <div class="order__form-field field">
+                  <label class="field__label" for="order-card-expiration">срок действия карты</label>
+                  <input class="field__input" id="order-card-expiration" name="order-card-expiration" placeholder="DD/YY" type="text" required />
+                </div>
+                <div class="order__form-field field">
+                  <label class="field__label" for="order-card-cvc">CVC</label>
+                  <input class="field__input" id="order-card-cvc" name="order-card-cvc" placeholder="" type="text" required />
+                </div>
+              </div>
             </div>
-            <div class="order__form-inner grid grid--2"></div>
 
-            <h2 class="order__form-title">дополнительная информация</h2>
-            <label for="order-textarea"><span>Примечания к заказу</span> (опционально)</label>
-            <input type="textarea" class=" field__input field__input--textarea" id="order-textarea" name="textarea">
+            <div class="order__form-inner">
+              <h2 class="order__form-title">дополнительная информация</h2>
+              <div class="order__form-field field">
+                <label class="field__label" for="order-textarea"><span>Примечания к заказу</span> (опционально)</label>
+                <textarea type="textarea" class="field__input field__input--textarea" id="order-textarea" name="order-textarea"></textarea>
+              </div>
+            </div>
           </form>
           <div class="order__total total total--dark">
             <h3 class="total__title">итого в заказе</h3>

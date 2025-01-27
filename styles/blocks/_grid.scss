@@ -22,12 +22,12 @@
   }
 
   &--3 {
-    @include desktop {
-      --gridColumns: 2;
-    }
+    // @include desktop {
+    //   --gridColumns: 2;
+    // }
 
-    @include mobile {
-      --gridColumns: 1;
-    }
+    // @include mobile {
+    //   --gridColumns: 1;
+    // }
   }
 }

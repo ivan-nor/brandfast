@@ -3,13 +3,13 @@
   --fieldInputTextColor: var(--color-dark);
   --fieldInputBgColor: var(--color-light);
   --fieldInputBorderColor: var(--color-dark);
-  --fieldInputPlaceholderColor: var(--color-dark-grey);
+  --fieldInputPlaceholderColor: var(--color-dark-gray);
   --fieldInputHoverBgColor: var(--color-accent);
 
   display: flex;
   flex-direction: column;
   align-items: start;
-  row-gap: 5px;
+  row-gap: 8px;
 
   @include mobile {
     row-gap: 10px;
@@ -29,6 +29,7 @@
 
   &__label {
     @include fluid-text(16, 14);
+    @include first-letter-uppercase;
   }
 
   &__input {
@@ -48,6 +49,10 @@
       padding-inline: 20px;
     }
 
+    &:has(option) {
+      color: var(--color-dark-gray);
+    }
+
     &:focus {
       border-color: var(--color-accent);
       outline: none;
@@ -60,7 +65,17 @@
     &--textarea {
       height: 190px;
       padding-block: 18px;
-      resize: none;
+      resize: vertical;
+      overflow-x: auto;
+      white-space: pre-wrap;
+
+      background-color: var(--color-light);
+      border: var(--border);
+      border-radius: var(--border-radius);
+
+      @include hover {
+        background-color: var(--color-light);
+      }
 
       @include mobile {
         height: 132px;
