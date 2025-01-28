@@ -8,24 +8,6 @@
 
   @include card;
 
-  &--large {
-    width: 100%;
-  }
-
-  &--dark {
-    @include card(var(--color-dark));
-
-    &__item:last-child {
-      border-top: var(--border-light);
-    }
-  }
-
-
-
-  &--accent {
-    @include card(var(--color-accent));
-  }
-
   &__title {
     @include first-letter-uppercase;
   
@@ -39,7 +21,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-  } 
+  }
 
   &__item {
     @include first-letter-uppercase(true);
@@ -81,5 +63,21 @@
       color: var(--color-dark);
       background-color: var(--color-light);
     }
+  }
+
+  &--large {
+    width: 100%;
+  }
+
+  &--dark {
+    @include card(var(--color-dark));
+
+    .total__item:last-child {
+      border-top: var(--border-light);
+    }
+  }
+
+  &--accent {
+    @include card(var(--color-accent));
   }
 }
