@@ -104,9 +104,8 @@
 
     .total {
 
-      &:has(&) {
-
-      }
+      // &:has(&) { // TODO если нужно будет исправить границы в темном total
+      // }
 
       &__summary {
         border-top: var(--border-light);
