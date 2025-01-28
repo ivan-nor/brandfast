@@ -1,4 +1,8 @@
 .breadcrumbs {
+  padding-block: 26px;
+
+  background-color: var(--color-gray);
+
   &__list {
     display: flex;
     gap: 8px;

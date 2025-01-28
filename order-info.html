@@ -99,17 +99,17 @@
         <span class="visually-hidden">Open navigation menu</span>
       </button>
     </div>
-    <div class="header__breadcrumbs">
-      <div class="breadcrumbs container">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">главная страница</a></li>
-          <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">отследить заказ</a></li>
-        </ul>
-      </div>
-    </div>
+    
   </header>
 
   <main>
+    <nav class="header__breadcrumbs breadcrumbs container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">главная страница</a></li>
+        <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">информация о заказе</a></li>
+      </ul>
+    </nav>
+
     <section class="section container"><!-- ORDER INFO -->
       <h1 class="section__title visually-hidden">Информация о заказе</h1>
       <div class="section__body">
@@ -147,29 +147,27 @@
               </article>
             </li>
           </ul>
-          <!-- TODO переделать тотал чтобы граница была на всю ширину но на темной версии паддинги ее перекрывали -->
           <div class="order-info__total total total--large">
-              <h3 class="total__title">итого</h3>
-              <ul class="total__list">
-                <li class="total__item">
-                  <span>всего товаров</span>
-                  <span>4 000 ₽</span>
-                </li>
-                <li class="total__item">
-                  <span>доставка</span>
-                  <span>бесплатная</span>
-                </li>
-                <li class="total__item">
-                  <span>скидка</span>
-                  <span>1 000 ₽</span>
-                </li>
-                <li class="total__item">
-                  <span>всего</span>
-                  <span>3 000 ₽</span>
-                </li>
-              </ul>
-              <button class="total__button button button--accent">оформить заказ</button>
+            <ul class="total__list">
+              <li class="total__item">
+                <span>всего товаров</span>
+                <span>4 000 ₽</span>
+              </li>
+              <li class="total__item">
+                <span>доставка</span>
+                <span>бесплатная</span>
+              </li>
+              <li class="total__item">
+                <span>скидка</span>
+                <span>1 000 ₽</span>
+              </li>
+            </ul>
+            <div class="total__summary">
+              <span>итого</span>
+              <span>3 000 ₽</span>
             </div>
+            <button class="total__button button button--transparent">отследить по номеру</button>
+          </div>
         </div>
       </div>
     </section>
