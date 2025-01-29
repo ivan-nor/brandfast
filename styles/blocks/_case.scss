@@ -1,3 +1,7 @@
+.section:has(.case__tiles) {
+  padding-top: 0;
+}
+
 .case {
   &__hero {
     @include card(var(--color-accent));
@@ -37,6 +41,62 @@
       background-position: 50% 51%;
       background-repeat: no-repeat;
       background-size: 150%;
+    }
+  }
+
+  &__main {
+    &__header {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      border-bottom: var(--border);
+      
+      &-name {
+        font-size: 20px;
+      }
+
+      &-description {
+        font-size: 14px;
+        color: var(--color-dark-gray);
+      }
+
+    }
+    
+    &__body {
+      padding-inline: 100px;
+    }
+
+    &__title {
+      padding-bottom: 16px;
+
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--color-dark-gray);
+
+      & p:has(strong) {
+        display: flex;
+        gap: 16px;
+
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+
+        &::before {
+          content: "";
+          flex: 1 0 8px;
+          background-color: var(--color-accent);
+        }
+      }
     }
   }
 
