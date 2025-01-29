@@ -88,16 +88,17 @@
 
   &__description {
     max-width: 550px;
-
+    
     display: flex;
     flex-direction: column;
-    gap: 20px;
+
     // #TODO: разобраться со шрифтами
     p {
+      --paragraphMarginBottom: 20px;
+
       font-family: "Space Grotesk", sans-serif;
       line-height: 20px;
       font-weight: normal;
-      margin-bottom: 0;
     }
 
     @include mobile {
