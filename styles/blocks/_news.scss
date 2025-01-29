@@ -1,3 +1,133 @@
+.section:has(.news) {
+  .section {
+    &__header {
+      padding-bottom: 32px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: start;
+      gap: 16px;
+
+      border-bottom: var(--border);
+    }
+
+    &__title {
+      max-width: max-content;
+
+      flex: 1 1 45%;
+      
+      font-size: 40px;
+
+    }
+
+    &__button {
+      max-width: max-content;
+      flex: 1 1 45%;
+    }
+
+    &__description {
+      text-align: start;
+      align-self: flex-start;
+      flex: 1 0 100%;
+      order: 3;
+    }
+  }
+}
+
 .news {
-  
+  padding-top: 32px;
+
+  &__inner {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__article {
+    @include card(var(--color-gray));
+
+    flex: 2 1 784px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-dark-gray);
+    overflow: hidden;
+    height: 100%; // Убедитесь, что высота задана
+  }
+
+  &__body {
+    padding: 60px 0 60px 50px;
+    max-width: 328px;
+    box-sizing: content-box;
+    flex: 1 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__image {
+    & img {
+      height: 100%;
+      aspect-ratio: 1;
+
+      object-fit: cover;
+    }
+  }
+
+  &__description p {
+    --paragraphMarginBottom: 16px;
+  }
+
+  &__aside {
+    @include card;
+
+    padding: 20px 24px 24px;
+
+    flex: 1 1 424px;
+
+    &-title {
+      margin-bottom: 20px;
+
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+
+    &-item {
+      padding-block: 24px;
+
+      display: flex;
+      gap: 24px;
+
+      border-bottom: var(--border);
+      
+      &:first-child {
+        padding-top: 0;
+      }
+      
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &-item-title {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    &-date {
+      color: var(--color-dark-gray);
+    }
+  }
 }
