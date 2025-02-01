@@ -54,3 +54,19 @@ function updateMainMargin() {
   const paddingHeight = headerHeight
   document.querySelector('main').style.paddingTop = `${paddingHeight}px`;
 }
+
+// РАСКРАШИВАНИЕ ЗВЕЗД РЕЙТИНГА
+const reviewsRatings = document.querySelectorAll('.reviews__card-rating')
+for (const rating of reviewsRatings) {
+  const value = rating.getAttribute('data-rating')
+  const stars = rating.querySelectorAll('.reviews__card-star')
+
+  for (const star of stars) {
+    const starNumber = star.getAttribute('data-star')
+    const path = star.querySelector('path')
+
+    if (value >= starNumber) {
+      path.style.fill = "#F9F9FC"
+    }
+  }
+}

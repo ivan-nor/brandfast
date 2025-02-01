@@ -1,0 +1,19 @@
+.counter {
+  padding: 14px 18px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border: var(--border);
+  border-radius: 16px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-dark-gray);
+
+  & button {
+    @include reset-button;
+
+    cursor: pointer;
+  }
+}
