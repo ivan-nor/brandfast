@@ -1,4 +1,16 @@
 .product {
+  &__main {
+    & .section {
+      &__header {
+        margin-bottom: 24px;
+      }
+
+      &__title {
+        font-size: 30px;
+      }
+    }
+  }
+
   @include card(var(--color-gray));
 
   padding: 50px;
@@ -23,7 +35,6 @@
 
     font-weight: 500;
     font-size: 30px;
-
   }
 
   &__tags {

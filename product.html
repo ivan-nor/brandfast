@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/swiper-bundle.min.css" />
   <link rel="icon" href="./images/icons/B.svg">
-  <title>карточка товара</title>
+  <title>Карточка товара</title>
 </head>
 
 <body>
@@ -97,7 +97,7 @@
     </div>
   </header>
 
-  <main><!-- PRODUCT -->
+  <main class="product__main"><!-- PRODUCT -->
     <nav class="header__breadcrumbs breadcrumbs container">
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">главная страница</a></li>
@@ -277,11 +277,11 @@
 
     <section class="section container"><!-- PRODUCT REVIEWS -->
       <header class="section__header">
-        <h2 class="section__title puddle-bg">отзывы о товаре</h2>
+        <h2 class="section__title puddle-bg puddle-bg--light">отзывы о товаре</h2>
       </header>
       <div class="section__body">
         <div class="reviews">
-          <div class="reviews__slider swiper">
+          <div class="product-reviews__slider reviews__slider swiper">
             <ul class="reviews__slider-list swiper-wrapper">
               <li class="reviews__slider-item swiper-slide">
                 <blockquote class="review-card">
@@ -362,7 +362,7 @@
 
     <section class="section container"><!-- PRODUCT FAQ -->
       <header class="section__header">
-        <h2 class="section__title puddle-bg">как ведется работа с нами</h2>
+        <h2 class="section__title puddle-bg puddle-bg--light">вопрос-ответ</h2>
       </header>
       <div class="section__body">
         <div class="process">
@@ -370,7 +370,7 @@
             <li class="process__item">
               <details class="process__accordion" open>
                 <summary class="process__accordion-header">
-                  <h3 class="process__accordion-title">Консультация</h3>
+                  <h3 class="process__accordion-title">Вопрос-1</h3>
                   <span class="process__accordion-indicator"></span>
                 </summary>
                 <div class="process__accordion-body">
@@ -383,7 +383,7 @@
             <li class="process__item">
               <details class="process__accordion">
                 <summary class="process__accordion-header">
-                  <h3 class="process__accordion-title">Исследования и разработка стратегии</h3>
+                  <h3 class="process__accordion-title">Вопрос-2</h3>
                   <span class="process__accordion-indicator"></span>
                 </summary>
                 <div class="process__accordion-body">
@@ -396,46 +396,7 @@
             <li class="process__item">
               <details class="process__accordion">
                 <summary class="process__accordion-header">
-                  <h3 class="process__accordion-title">Выполнение</h3>
-                  <span class="process__accordion-indicator"></span>
-                </summary>
-                <div class="process__accordion-body">
-                  <p>During the initial consultation, we will discuss your business goals and objectives, target
-                    audience, and current marketing efforts. This will allow us to understand your needs and tailor our
-                    services to best fit your requirements.</p>
-                </div>
-              </details>
-            </li>
-            <li class="process__item">
-              <details class="process__accordion">
-                <summary class="process__accordion-header">
-                  <h3 class="process__accordion-title">Мониторинг и оптимизация</h3>
-                  <span class="process__accordion-indicator"></span>
-                </summary>
-                <div class="process__accordion-body">
-                  <p>During the initial consultation, we will discuss your business goals and objectives, target
-                    audience, and current marketing efforts. This will allow us to understand your needs and tailor our
-                    services to best fit your requirements.</p>
-                </div>
-              </details>
-            </li>
-            <li class="process__item">
-              <details class="process__accordion">
-                <summary class="process__accordion-header">
-                  <h3 class="process__accordion-title">Отчетность и коммуникация</h3>
-                  <span class="process__accordion-indicator"></span>
-                </summary>
-                <div class="process__accordion-body">
-                  <p>During the initial consultation, we will discuss your business goals and objectives, target
-                    audience, and current marketing efforts. This will allow us to understand your needs and tailor our
-                    services to best fit your requirements.</p>
-                </div>
-              </details>
-            </li>
-            <li class="process__item">
-              <details class="process__accordion">
-                <summary class="process__accordion-header">
-                  <h3 class="process__accordion-title">Постоянное улучшение</h3>
+                  <h3 class="process__accordion-title">Вопрос-3</h3>
                   <span class="process__accordion-indicator"></span>
                 </summary>
                 <div class="process__accordion-body">
@@ -452,7 +413,7 @@
 
     <section class="section container"><!-- PRODUCT SERVICES-->
       <header class="section__header">
-        <h2 class="section__title puddle-bg">наши услуги</h2>
+        <h2 class="section__title puddle-bg puddle-bg--light">Похожие услуги</h2>
         <div class="section__description">
         </div>
       </header>
@@ -829,7 +790,9 @@
     </div>
   </footer>
 
-  <script type="module" src="./scripts/index.js"></script>
+  <script  src="./scripts/index.js"></script>
+  <script  src="./scripts/swiper-bundle.min.js"></script>
+  <script  src="./scripts/swiper.js"></script>
 </body>
 
 </html>
