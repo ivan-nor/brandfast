@@ -45,7 +45,6 @@ for (const item of footerItems) {
 // ВЫЧИСЛЕНИЕ ОТСТУПА MAIN
 window.addEventListener('load', updateMainMargin);
 window.addEventListener('resize', updateMainMargin);
-console.log('MAIN');
 function updateMainMargin() {
   // dropdownMenuElement.classList.add('mobile-hidden')
   // dropdownCloseButton.classList.add('hide')
