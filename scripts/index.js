@@ -69,3 +69,42 @@ for (const rating of reviewsRatings) {
     }
   }
 }
+
+// СКРЫТИЕ НОМЕРА КАРТЫ
+document.addEventListener("DOMContentLoaded", function() {
+  const cardNumberElements = document.querySelectorAll('.credits-card__number');
+  cardNumberElements.forEach((cardNumberElement) => {
+    const cardNumber = cardNumberElement.textContent;
+    
+    // Заменяем первые 12 цифр на звездочки
+    const maskedNumber = cardNumber.replace(/\d{12}/, '**** **** **** ');
+    
+    // Обновляем содержимое элемента
+    cardNumberElement.textContent = maskedNumber;
+  })
+});
+
+// КОПИРОВАНИЕ НОМЕРА КАРТЫ В БУФЕР ОБМЕНА
+document.querySelectorAll('.credits-card__button--copy').forEach((button) => {
+  button.addEventListener("click", function() {
+    const cardNumberElement = button.parentNode.querySelector('.credits-card__number');
+    const cardNumber = cardNumberElement.getAttribute('data-number');
+
+    // Используем API для работы с буфером обмена
+    navigator.clipboard.writeText(cardNumber).then(function() {
+      alert("Номер карты скопирован в буфер обмена!");
+    }).catch(function(err) {
+        console.error("Ошибка при копировании: ", err);
+    });
+  })
+});
+
+// ВЫПАДАЮЩЕЕ МЕНЮ КРЕДИТНОЙ КАРТЫ
+document.querySelectorAll('.credits-card__button--menu').forEach((button) => {
+  const menu = button.parentNode.querySelector('.credits-card__list')
+  console.log('button.parentNode :>> ', button.parentNode);
+  console.log('menu :>> ', menu);
+  button.addEventListener('click', () => {
+    menu.classList.remove('hidden');
+  })
+})

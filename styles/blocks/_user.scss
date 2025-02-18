@@ -44,6 +44,9 @@
       gap: 24px;
     }
 
+    &-item {
+      flex: 50%;
+    }
   }
 
   &__card {
@@ -122,16 +125,20 @@
       display: flex;
       gap: 4px;
       justify-content: space-between;
+      align-items: start;
 
       font-size: 14px;
       line-height: 20px;
 
       & span:first-child {
         @include first-letter-uppercase;
+
+        flex: 17%;
       }
 
       & span:last-child {
         color: var(--color-dark-gray);
+        flex: 70%;
       }
     }
 
@@ -140,10 +147,8 @@
       padding: 16px;
 
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-content: flex-start;
-      justify-content: center;
+      // align-content: flex-start;
+      // justify-content: center;
       column-gap: 16px;
       row-gap: 16px;
 
@@ -151,8 +156,32 @@
       border-radius: var(--border-radius);
     }
 
-    &-icon {
-      flex:  0 100%;
+    &-premium {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    &-level {
+      @include first-letter-uppercase;
+
+      max-width: max-content;
+
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &-counter {
+      @include first-letter-uppercase;
+      max-width: max-content;
+
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &-button {
+      @include first-letter-uppercase;
     }
   }
 }
