@@ -173,16 +173,20 @@
       display: flex;
       gap: 4px;
       justify-content: space-between;
+      align-items: start;
 
       font-size: 14px;
       line-height: 20px;
 
       & span:first-child {
         @include first-letter-uppercase;
+
+        flex: 17%;
       }
 
       & span:last-child {
         color: var(--color-dark-gray);
+        flex: 70%;
       }
     }
 
