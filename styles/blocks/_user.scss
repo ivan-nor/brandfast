@@ -2,6 +2,46 @@
   & .section__header {
     margin-bottom: 24px;
   }
+
+  .order-info__card {
+    padding: 29px 50px 11px;
+    row-gap: 4px;
+    grid-template-rows: auto auto auto 44px;
+
+    &__title {
+      max-height: max-content;
+    }
+
+    &__banner {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      align-items: end;
+
+      max-height: max-content;
+    }
+
+    &__image {
+      grid-row: 1 / 5;
+      align-self: start;
+    }
+
+    &__description {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__label {
+      padding: 4px 8px;
+    }
+
+    &__price {
+      line-height: 44px;
+    }
+  }
+
 }
 
 .user {
