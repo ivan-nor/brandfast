@@ -69,3 +69,28 @@ for (const rating of reviewsRatings) {
     }
   }
 }
+
+// ВЫПАДАЮЩЕЕ МЕНЮ КРЕДИТНОЙ КАРТЫ
+const creditsCardMenuButtons = document.querySelectorAll('.credits-card__button--menu')
+creditsCardMenuButtons.forEach((button) => button.addEventListener('focus', () => button.nextElementSibling.classList.remove('hidden')))
+creditsCardMenuButtons.forEach((button) => button.addEventListener('blur', () => button.nextElementSibling.classList.add('hidden')))
+
+// КОПИРОВАНИЕ НОМЕРА КАРТЫ В БУФЕР
+const creditsCardCopyButtons = document.querySelectorAll('.credits-card__copy')
+creditsCardCopyButtons.forEach((button) => button.addEventListener('click', () => {
+  const cardNumber = button.previousElementSibling.getAttribute('data-number')
+  navigator.clipboard.writeText(cardNumber)
+    .then(() => {
+        // Уведомление о том, что номер скопирован
+        alert('Номер карты скопирован'); // #TODO: изменить на другую всплывашку
+    })
+    .catch(err => {
+        console.error('Ошибка при копировании: ', err);
+    });
+}))
+
+// СКРЫТИЕ НАЧАЛА НОМЕРА КАРТЫ
+const cardNumbers = document.querySelectorAll('.credits-card__number')
+cardNumbers.forEach((number) => (number.textContent = `**** **** **** ${number.textContent.slice(-4)}`))
+
+// 

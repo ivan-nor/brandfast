@@ -115,38 +115,46 @@
               <!-- #TODO: добавить слайдер для многих карт, возможно с показом части карт, если их больше двух -->
               <ul class="user__credits-list">
                 <li class="user__credits-item user__credits-card credits-card credits-card--blue">
-                    <h4 class="credits-card__title">БАНК 1</h3>
-                    <button class="credits-card__button .credits-card__button--menu button button--transparent">
+                  <h4 class="credits-card__title">БАНК 1</h4>
+                  <div class="credits-card__dropdown">
+                    <button class="credits-card__button credits-card__button--menu button button--transparent">
                       <img src="./images/icons/dots-three.svg" alt="" width="24" height="24">
                     </button>
+                    <div class="credits-card__menu hidden">
+                      <ul class="credits-card__list">
+                        <li class="credits-card__item"><button>редактировать</button></li>
+                        <li class="credits-card__item"><button>удалить</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p class="credits-card__label">Card number</p>
+                  <p class="credits-card__number" data-number="01234567890123814">01234567890123814</p>
+                  <div class="credits-card__copy">
+                    <button class="credits-card__button credits-card__button--copy button button--transparent">
+                      <img src="./images/icons/copy-white.svg" alt="" width="20" height="20">
+                    </button>
+                  </div>
+                  <img src="./images/icons/visa-white.svg" alt="" class="credits-card__payments" width="40" height="40">
+                  <p class="credits-card__name">anatoliy konstantinopolsky</p>
+                </li>
+                <li class="user__credits-item user__credits-card credits-card credits-card--green">
+                  <h4 class="credits-card__title">БАНК 2</h4>
+                  <div class="credits-card__dropdown">
+                    <button class="credits-card__button credits-card__button--menu button button--transparent"><img src="./images/icons/dots-three.svg" alt="" width="24" height="24"></button>
                     <div class="credits-card__menu hidden">
                       <ul class="credits-card__list">
                         <li class="credits-card__item">редактировать</li>
                         <li class="credits-card__item">удалить</li>
                       </ul>
                     </div>
-                    <p class="credits-card__label">Card number</p>
-                    <p class="credits-card__number">01234567890123814</p>
+                  </div>
+                  <p class="credits-card__label">Card number</p>
+                  <p class="credits-card__number" data-number="01234567890121723">01234567890121723</p>
+                  <div class="credits-card__copy">
                     <button class="credits-card__button credits-card__button--copy button button--transparent">
                       <img src="./images/icons/copy-white.svg" alt="" width="20" height="20">
                     </button>
-                    <img src="./images/icons/visa-white.svg" alt="" class="credits-card__payments" width="40" height="40">
-                    <p class="credits-card__name">anatoliy konstantinopolsky</p>
-                </li>
-                <li class="user__credits-item user__credits-card credits-card credits-card--green">
-                  <h4 class="credits-card__title">БАНК 2</h3>
-                  <button class="credits-card__button .credits-card__button--menu button button--transparent"><img src="./images/icons/dots-three.svg" alt="" width="24" height="24"></button>
-                  <div class="credits-card__menu hidden">
-                    <ul class="credits-card__list">
-                      <li class="credits-card__item">редактировать</li>
-                      <li class="credits-card__item">удалить</li>
-                    </ul>
                   </div>
-                  <p class="credits-card__label">Card number</p>
-                  <p class="credits-card__number">01234567890121723</p>
-                  <button class="credits-card__button credits-card__button--copy button button--transparent">
-                    <img src="./images/icons/copy-white.svg" alt="" width="20" height="20">
-                  </button>
                   <img src="./images/icons/mastercard-white.svg" alt="" class="credits-card__payments" width="40" height="40">
                   <p class="credits-card__name">anatoliy konstantinopolsky</p>
                 </li>
