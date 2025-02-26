@@ -1,4 +1,6 @@
 .footer {
+  width: 100%;
+
   @include mobile {
     padding-inline: 0;
   }
