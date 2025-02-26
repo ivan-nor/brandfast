@@ -218,7 +218,9 @@
     }
 
     &-button {
-      @include first-letter-uppercase;
+      @include first-letter-uppercase(true);
+      
+      // display: inline-flex;
     }
   }
 }
