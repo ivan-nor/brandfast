@@ -1,4 +1,10 @@
-.user  {
+.section:has(.user) + .section:has(.order-info) {
+  & .section__header {
+    margin-bottom: 24px;
+  }
+}
+
+.user {
   display: flex;
   gap: 32px;
 
