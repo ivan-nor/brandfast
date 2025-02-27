@@ -1,27 +1,24 @@
 <!-- #TODO расставить все ссылки на нужные страницы -->
 <!doctype html>
 <html lang="ru">
+
 <head>
-  <base href="https://ivan-nor.github.io/brandfast/">
+  <!-- <base href="https://ivan-nor.github.io/brandfast/"> #TODO для деплоя на gp-->
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/swiper-bundle.min.css" />
   <link rel="icon" href="./images/icons/B.svg">
   <title>BrandFast</title>
 </head>
+
 <body>
   <header class="header">
     <div class="header__inner container">
       <a class="header__logo logo" href="/">
-        <img
-          class="logo__image"
-          src="./images/logo.svg"
-          alt="BrandFast logo"
-          width="220" height="48" loading="lazy"
-        />
+        <img class="logo__image" src="./images/logo.svg" alt="BrandFast logo" width="220" height="48" loading="lazy" />
       </a>
       <nav class="header__menu hidden-mobile">
         <ul class="header__menu-list">
@@ -32,16 +29,21 @@
                 <img src="./images/icons/arrow-dropdown.svg" alt="dropdown list icon" width="24" height="24" />
               </div>
             </a>
+            <!-- TODO это относится ко всем страницам -->
             <!-- #TODO: переделать на клик -->
+            <!-- #TODO при наведении прыгает весь хедер на пару пикселей -->
             <ul class="header__submenu-list hidden">
               <li class="header__submenu-item">
-                <a href="#" class="header__submenu-link"><span>разработка логотипа</span></a>
+                <a href="#" class="header__submenu-link"><span>разработка
+                    логотипа</span></a>
               </li>
               <li class="header__submenu-item">
-                <a href="#" class="header__submenu-link"><span>фирменный стиль</span></a>
+                <a href="#" class="header__submenu-link"><span>фирменный
+                    стиль</span></a>
               </li>
               <li class="header__submenu-item">
-                <a href="#" class="header__submenu-link"><span>бренд с нуля</span></a>
+                <a href="#" class="header__submenu-link"><span>бренд с
+                    нуля</span></a>
               </li>
               <li class="header__submenu-item">
                 <a href="#" class="header__submenu-link"><span>нейминг</span></a>
@@ -61,7 +63,8 @@
             <a class="header__menu-link" href="/"><span>портфолио</span></a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/"><span>наши партнеры и отзывы</span></a>
+            <a class="header__menu-link" href="/"><span>наши партнеры и
+                отзывы</span></a>
           </li>
           <li class="header__menu-item">
             <a class="header__menu-link" href="/"><span>новости</span></a>
@@ -78,8 +81,9 @@
           </li>
           <li class="header__actions-item">
             <a href="./cart.html" class="header__actions-cart">
-              <img class="header__actions-cart-image" src="./images/shopping-cart.svg" alt="shopping cart image" width="24" height="24" />
-              <!-- #TODO: добавить количество товаров -->
+              <img class="header__actions-cart-image" src="./images/shopping-cart.svg" alt="shopping cart image"
+                width="24" height="24" />
+              <!-- #TODO: добавить количество товаров и если нет товаров -->
               <div class="header__actions-cart-counter">5</div>
             </a>
           </li>
@@ -88,17 +92,9 @@
           </li>
         </ul>
       </div>
-      <!-- <button
-        class="header__button button button--transparent hidden-mobile"
-        type="button"
-      >
-        Request a quote
-      </button> -->
-      <button
-        class="header__burger-button burger-button visible-mobile"
-        type="button"
-        onclick="mobileOverlay.showModal()"
-      >
+      <!-- TODO в мобильной версии появится эта кнопка, нужно сделать другую модалку -->
+      <button class="header__burger-button burger-button visible-mobile" type="button"
+        onclick="mobileOverlay.showModal()">
         <span class="visually-hidden">Open navigation menu</span>
       </button>
     </div>
@@ -110,78 +106,53 @@
         <div class="hero">
           <div class="hero__main">
             <div class="hero__banner">
-              <img src="./images/icons/star.svg" alt="" width="16" height="16">
+              <img src="./images/icons/star.svg" alt width="16" height="16">
               <p>бренд по цене чашки кофе</p>
-              <img src="./images/icons/star.svg" alt="" width="16" height="16">
+              <img src="./images/icons/star.svg" alt width="16" height="16">
             </div>
             <div class="hero__body">
               <h1 class="hero__title">BrandFast</h1>
               <div class="hero__description">
                 <p>Это маркет-агентство пакетного брендинга.</p>
-                <p>Делаем функциональный брендинг, который выделяет бизнес клиента на фоне конкурентов и запоминается клиентам.</p>
+                <p>Делаем функциональный брендинг, который выделяет бизнес клиента на фоне конкурентов и запоминается
+                  клиентам.
+                </p>
               </div>
               <div class="hero__footer">
-                <button class="hero__button button" type="button">Создать бренд за 1 день</button>
+                <!-- TODO сделать модалки и прикрутить сюда -->
+                <button class="hero__button button" type="button">Создать
+                  бренд за 1 день</button>
                 <button class="hero__button button button--transparent " type="button">Обсудить проект</button>
               </div>
             </div>
-            <img
-              class="hero__image"
-              src="./images/hero-bg.svg"
-              alt=""
-              width="564" height="484" loading="lazy"
-            />
+            <img class="hero__image" src="./images/hero-bg.svg" alt width="564" height="484" loading="lazy" />
           </div>
           <div class="hero__partners">
             <h2 class="visually-hidden">Наши партнеры</h2>
             <ul class="hero__partners-list">
               <li class="hero__partners-item">
-                <img
-                  class="hero__partners-image"
-                  src="./images/partners/amazon.svg"
-                  alt="Amazon"
-                  width="130" height="48" loading="lazy"
-                />
+                <img class="hero__partners-image" src="./images/partners/amazon.svg" alt="Amazon" width="130"
+                  height="48" loading="lazy" />
               </li>
               <li class="hero__partners-item">
-                <img
-                  class="hero__partners-image"
-                  src="./images/partners/dribble.svg"
-                  alt="Dribble"
-                  width="130" height="48" loading="lazy"
-                />
+                <img class="hero__partners-image" src="./images/partners/dribble.svg" alt="Dribble" width="130"
+                  height="48" loading="lazy" />
               </li>
               <li class="hero__partners-item">
-                <img
-                  class="hero__partners-image"
-                  src="./images/partners/hubspot.svg"
-                  alt="HubSpot"
-                  width="130" height="48" loading="lazy"
-                />
+                <img class="hero__partners-image" src="./images/partners/hubspot.svg" alt="HubSpot" width="130"
+                  height="48" loading="lazy" />
               </li>
               <li class="hero__partners-item">
-                <img
-                  class="hero__partners-image"
-                  src="./images/partners/notion.svg"
-                  alt="Notion"
-                  width="130" height="48" loading="lazy"
-                />
+                <img class="hero__partners-image" src="./images/partners/notion.svg" alt="Notion" width="130"
+                  height="48" loading="lazy" />
               </li>
               <li class="hero__partners-item">
-                <img
-                  class="hero__partners-image"
-                  src="./images/partners/netflix.svg"
-                  alt="Netflix"
-                  width="130" height="48" loading="lazy"
-                />
+                <img class="hero__partners-image" src="./images/partners/netflix.svg" alt="Netflix" width="130"
+                  height="48" loading="lazy" />
               </li>
               <li class="hero__partners-item">
-                <img
-                  class="hero__partners-image"
-                  src="./images/partners/zoom.svg"
-                  alt="Zoom"
-                  width="130" height="48" loading="lazy"
-                />
+                <img class="hero__partners-image" src="./images/partners/zoom.svg" alt="Zoom" width="130" height="48"
+                  loading="lazy" />
               </li>
             </ul>
           </div>
@@ -210,25 +181,31 @@
                   <div class="service-card__price">2 000 ₽ =</div>
                   <div class="service-card__label">
                     <span class="service-card__count">5x</span>
-                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt="">
+                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt>
                   </div>
                 </div>
                 <button class="service-card__button button" type="button">купить в 1 клик</button>
                 <a class="service-card__link" href="/">
                   <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                    <path d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z" fill="#1A1A1A" />
-                    <path d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <path
+                      d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z"
+                      fill="#1A1A1A" />
+                    <path
+                      d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                   </svg>
                 </a>
-                <img
-                  class="service-card__image"
-                  src="./images/services/1.svg"
-                  alt=""
-                  width="232" height="183" loading="lazy"
-                />
+                <img class="service-card__image" src="./images/services/1.svg" alt width="232" height="183"
+                  loading="lazy" />
               </article>
             </li>
             <li class="services__item">
@@ -241,25 +218,31 @@
                   <div class="service-card__price">2 000 ₽ =</div>
                   <div class="service-card__label">
                     <span class="service-card__count">5x</span>
-                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt="">
+                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt>
                   </div>
                 </div>
                 <button class="service-card__button button" type="button">купить в 1 клик</button>
                 <a class="service-card__link" href="/">
                   <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                    <path d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z" fill="#1A1A1A" />
-                    <path d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <path
+                      d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z"
+                      fill="#1A1A1A" />
+                    <path
+                      d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                   </svg>
                 </a>
-                <img
-                  class="service-card__image"
-                  src="./images/services/2.svg"
-                  alt=""
-                  width="220" height="155" loading="lazy"
-                />
+                <img class="service-card__image" src="./images/services/2.svg" alt width="220" height="155"
+                  loading="lazy" />
               </article>
             </li>
             <li class="services__item">
@@ -272,25 +255,31 @@
                   <div class="service-card__price">2 000 ₽ =</div>
                   <div class="service-card__label">
                     <span class="service-card__count">5x</span>
-                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt="">
+                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt>
                   </div>
                 </div>
                 <button class="service-card__button button" type="button">купить в 1 клик</button>
                 <a class="service-card__link" href="/">
                   <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                    <path d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z" fill="#1A1A1A" />
-                    <path d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <path
+                      d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z"
+                      fill="#1A1A1A" />
+                    <path
+                      d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                   </svg>
                 </a>
-                <img
-                  class="service-card__image"
-                  src="./images/services/3.svg"
-                  alt=""
-                  width="210" height="170" loading="lazy"
-                />
+                <img class="service-card__image" src="./images/services/3.svg" alt width="210" height="170"
+                  loading="lazy" />
               </article>
             </li>
             <li class="services__item">
@@ -302,25 +291,31 @@
                   <div class="service-card__price">2 000 ₽ =</div>
                   <div class="service-card__label">
                     <span class="service-card__count">5x</span>
-                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt="">
+                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt>
                   </div>
                 </div>
                 <button class="service-card__button button" type="button">купить в 1 клик</button>
                 <a class="service-card__link" href="/">
                   <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                    <path d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z" fill="#1A1A1A" />
-                    <path d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <path
+                      d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z"
+                      fill="#1A1A1A" />
+                    <path
+                      d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                   </svg>
                 </a>
-                <img
-                  class="service-card__image"
-                  src="./images/services/4.svg"
-                  alt=""
-                  width="210" height="170" loading="lazy"
-                />
+                <img class="service-card__image" src="./images/services/4.svg" alt width="210" height="170"
+                  loading="lazy" />
               </article>
             </li>
             <li class="services__item">
@@ -332,25 +327,31 @@
                   <div class="service-card__price">2 000 ₽ =</div>
                   <div class="service-card__label">
                     <span class="service-card__count">5x</span>
-                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt="">
+                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt>
                   </div>
                 </div>
                 <button class="service-card__button button" type="button">купить в 1 клик</button>
                 <a class="service-card__link" href="/">
                   <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                    <path d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z" fill="#1A1A1A" />
-                    <path d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <path
+                      d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z"
+                      fill="#1A1A1A" />
+                    <path
+                      d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                   </svg>
                 </a>
-                <img
-                  class="service-card__image"
-                  src="./images/services/5.svg"
-                  alt=""
-                  width="210" height="170" loading="lazy"
-                />
+                <img class="service-card__image" src="./images/services/5.svg" alt width="210" height="170"
+                  loading="lazy" />
               </article>
             </li>
             <li class="services__item">
@@ -362,25 +363,31 @@
                   <div class="service-card__price">2 000 ₽ =</div>
                   <div class="service-card__label">
                     <span class="service-card__count">5x</span>
-                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt="">
+                    <img class="service-card__icon" src="./images/icons/coffee.svg" width="24" height="24" alt>
                   </div>
                 </div>
                 <button class="service-card__button button" type="button">купить в 1 клик</button>
                 <a class="service-card__link" href="/">
                   <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                    <path d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z" fill="#1A1A1A" />
-                    <path d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z" stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    <path d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"  stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <path
+                      d="m27.92,0.05c-14.18,-0.91 -26.42,9.82 -27.34,23.98c-0.42,6.53 1.64,12.64 5.38,17.42l-4.48,7.94c-0.48,0.83 0.39,1.79 1.27,1.4l8.95,-3.93c3.7,2.54 8.1,4.15 12.9,4.46c14.19,0.91 26.43,-9.82 27.35,-23.98c0.91,-14.15 -9.84,-26.37 -24.03,-27.28l0,-0.01z"
+                      fill="#1A1A1A" />
+                    <path
+                      d="m31.25,31.25l-10.7,0l-2.62,-14.38c-0.03,-0.18 -0.12,-0.33 -0.26,-0.45c-0.13,-0.11 -0.3,-0.17 -0.48,-0.17l-1.69,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.5,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m31.25,35c1.04,0 1.88,-0.84 1.88,-1.87c0,-1.04 -0.84,-1.88 -1.88,-1.88c-1.04,0 -1.87,0.84 -1.87,1.88c0,1.03 0.83,1.87 1.87,1.87z"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path
+                      d="m21.86,27.5l9.77,0c0.36,0 0.7,-0.12 0.97,-0.35c0.27,-0.22 0.45,-0.54 0.51,-0.88l1.14,-6.27l-14.75,0"
+                      stroke="#91EE22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                   </svg>
                 </a>
-                <img
-                  class="service-card__image"
-                  src="./images/services/6.svg"
-                  alt=""
-                  width="210" height="170" loading="lazy"
-                />
+                <img class="service-card__image" src="./images/services/6.svg" alt width="210" height="170"
+                  loading="lazy" />
               </article>
             </li>
           </ul>
@@ -397,29 +404,32 @@
           <ul class="benefits__list">
             <li class="benefits__item">
               <div class="benefits__header">
-                <img src="./images/icons/benefits_rocket.svg" alt="" class="benefits__image">
+                <img src="./images/icons/benefits_rocket.svg" alt class="benefits__image">
                 <h3 class="benefits__title puddle-bg puddle-bg--light">быстро</h3>
               </div>
               <div class="benefits__description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. </p>
               </div>
             </li>
             <li class="benefits__item">
               <div class="benefits__header">
-                <img src="./images/icons/benefits_cardholder.svg" alt="" class="benefits__image">
+                <img src="./images/icons/benefits_cardholder.svg" alt class="benefits__image">
                 <h3 class="benefits__title puddle-bg puddle-bg--light">доступно</h3>
               </div>
               <div class="benefits__description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. </p>
               </div>
             </li>
             <li class="benefits__item">
               <div class="benefits__header">
-                <img src="./images/icons/benefits_medal.svg" alt="" class="benefits__image">
+                <img src="./images/icons/benefits_medal.svg" alt class="benefits__image">
                 <h3 class="benefits__title puddle-bg puddle-bg--light">качественно</h3>
               </div>
               <div class="benefits__description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. </p>
               </div>
             </li>
           </ul>
@@ -429,16 +439,16 @@
             <div class="banner__body">
               <h3 class="banner__title">О нас</h3>
               <div class="banner__description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo
+                  consequat.
+                </p>
               </div>
-              <img src="./images/logo_dark.svg" alt="">
+              <img src="./images/logo_dark.svg" alt>
             </div>
-            <img
-              class="banner__image hidden-mobile"
-              src="./images/banner-bg.svg"
-              alt=""
-              width="494" height="394" loading="lazy"
-            />
+            <img class="banner__image hidden-mobile" src="./images/banner-bg.svg" alt width="494" height="394"
+              loading="lazy" />
           </div>
         </div>
       </div>
@@ -459,19 +469,22 @@
             <li class="portfolio__item">
               <article class="portfolio-card">
                 <div class="portfolio-card__image">
-                  <img src="./images/portfolio1.png" alt="">
+                  <img src="./images/portfolio1.png" alt>
                 </div>
                 <div class="portfolio-card__body">
                   <h3 class="portfolio-card__title">
                     <span class="puddle-bg">наименование проекта</span>
                   </h3>
-                  <p class="portfolio-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <p class="portfolio-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna.</p>
                   <a class="portfolio-card__link" href="/">
                     <span>узнать больше</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 18L18 6" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.25 6H18V15.75" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 18L18 6" stroke stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M8.25 6H18V15.75" stroke stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg> -->
+                    <img src="./images/icons/arrow-up-right.svg" alt="" width="20" height="20">
                   </a>
                 </div>
               </article>
@@ -479,18 +492,21 @@
             <li class="portfolio__item">
               <article class="portfolio-card portfolio-card--accent-bg">
                 <div class="portfolio-card__image">
-                  <img src="./images/portfolio2.png" alt="">
+                  <img src="./images/portfolio2.png" alt>
                 </div>
                 <div class="portfolio-card__body">
                   <h3 class="portfolio-card__title">
-                    <span class="puddle-bg puddle-bg--light">наименование проекта</span>
+                    <span class="puddle-bg puddle-bg--light">наименование
+                      проекта</span>
                   </h3>
-                  <p class="portfolio-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <p class="portfolio-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna.</p>
                   <a class="portfolio-card__link" href="/">
                     <span>узнать больше</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 18L18 6" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.25 6H18V15.75" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6 18L18 6" stroke stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M8.25 6H18V15.75" stroke stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
                     </svg>
                   </a>
                 </div>
@@ -499,18 +515,21 @@
             <li class="portfolio__item">
               <article class="portfolio-card portfolio-card--dark-bg">
                 <div class="portfolio-card__image">
-                  <img src="./images/portfolio3.png" alt="">
+                  <img src="./images/portfolio3.png" alt>
                 </div>
                 <div class="portfolio-card__body">
                   <h3 class="portfolio-card__title">
-                    <span class="puddle-bg puddle-bg--light">наименование проекта</span>
+                    <span class="puddle-bg puddle-bg--light">наименование
+                      проекта</span>
                   </h3>
-                  <p class="portfolio-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <p class="portfolio-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna.</p>
                   <a class="portfolio-card__link" href="/">
                     <span>узнать больше</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 18L18 6" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.25 6H18V15.75" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6 18L18 6" stroke stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M8.25 6H18V15.75" stroke stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
                     </svg>
                   </a>
                 </div>
@@ -519,18 +538,20 @@
             <li class="portfolio__item">
               <article class="portfolio-card">
                 <div class="portfolio-card__image">
-                  <img src="./images/portfolio4.png" alt="">
+                  <img src="./images/portfolio4.png" alt>
                 </div>
                 <div class="portfolio-card__body">
                   <h3 class="portfolio-card__title">
                     <span class="puddle-bg">наименование проекта</span>
                   </h3>
-                  <p class="portfolio-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <p class="portfolio-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna.</p>
                   <a class="portfolio-card__link" href="/">
                     <span>узнать больше</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 18L18 6" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.25 6H18V15.75" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6 18L18 6" stroke stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M8.25 6H18V15.75" stroke stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
                     </svg>
                   </a>
                 </div>
@@ -542,7 +563,8 @@
     </section>
 
     <!-- #FIXME: полностью переделать свайпер с отзывами на двух страницах -->
-    <section class="section container"><!-- REVIEWS -->
+    <section class="section container">
+      <!-- REVIEWS -->
       <header class="section__header">
         <h2 class="section__title puddle-bg">отзывы наших клиентов</h2>
       </header>
@@ -557,7 +579,8 @@
                   </div>
                   <footer class="review-card__footer">
                     <cite class="review-card__name">Иванов Иван</cite>
-                    <cite class="review-card__company">Директор по маркетингу XYZ Corp</cite>
+                    <cite class="review-card__company">Директор по маркетингу
+                      XYZ Corp</cite>
                   </footer>
                 </blockquote>
               </li>
@@ -569,7 +592,8 @@
                   </div>
                   <footer class="review-card__footer">
                     <cite class="review-card__name">Иванов Иван</cite>
-                    <cite class="review-card__company">Директор по маркетингу XYZ Corp</cite>
+                    <cite class="review-card__company">Директор по маркетингу
+                      XYZ Corp</cite>
                   </footer>
                 </blockquote>
               </li>
@@ -578,11 +602,13 @@
                   <div class="review-card__body">
                     <p>"We have been working with BrandFast for the past year and have seen a significant increase in
                       website traffic and leads as a result of their efforts. The team is professional, responsive, and
-                      truly cares about the success of our business."</p>
+                      truly cares about
+                      the success of our business."</p>
                   </div>
                   <footer class="review-card__footer">
                     <cite class="review-card__name">Иванов Иван</cite>
-                    <cite class="review-card__company">Директор по маркетингу XYZ Corp</cite>
+                    <cite class="review-card__company">Директор по маркетингу
+                      XYZ Corp</cite>
                   </footer>
                 </blockquote>
               </li>
@@ -591,12 +617,15 @@
                   <div class="review-card__body">
                     <p>"We have been working with BrandFast for the past year and have seen a significant increase in
                       website traffic and leads as a result of their efforts. The team is professional, responsive, and
-                      truly cares about the success of our business. We highly recommend BrandFast to any company
-                      looking to grow their online presence."</p>
+                      truly cares about
+                      the success of our business. We highly recommend BrandFast to any company looking to grow their
+                      online presence."
+                    </p>
                   </div>
                   <footer class="review-card__footer">
                     <cite class="review-card__name">Иванов Иван</cite>
-                    <cite class="review-card__company">Директор по маркетингу XYZ Corp</cite>
+                    <cite class="review-card__company">Директор по маркетингу
+                      XYZ Corp</cite>
                   </footer>
                 </blockquote>
               </li>
@@ -627,7 +656,8 @@
       </div>
     </section>
 
-    <section class="section container"><!-- PROCESS -->
+    <section class="section container">
+      <!-- PROCESS -->
       <header class="section__header">
         <h2 class="section__title puddle-bg">как ведется работа с нами</h2>
       </header>
@@ -641,7 +671,11 @@
                   <span class="process__accordion-indicator"></span>
                 </summary>
                 <div class="process__accordion-body">
-                  <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+                  <p>During the initial consultation, we will discuss your business goals and objectives, target
+                    audience, and current marketing efforts. This will allow us to understand your needs and tailor our
+                    services to best fit your
+                    requirements.
+                  </p>
                 </div>
               </details>
             </li>
@@ -652,7 +686,11 @@
                   <span class="process__accordion-indicator"></span>
                 </summary>
                 <div class="process__accordion-body">
-                  <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+                  <p>During the initial consultation, we will discuss your business goals and objectives, target
+                    audience, and current marketing efforts. This will allow us to understand your needs and tailor our
+                    services to best fit your
+                    requirements.
+                  </p>
                 </div>
               </details>
             </li>
@@ -663,40 +701,59 @@
                   <span class="process__accordion-indicator"></span>
                 </summary>
                 <div class="process__accordion-body">
-                  <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+                  <p>During the initial consultation, we will discuss your business goals and objectives, target
+                    audience, and current marketing efforts. This will allow us to understand your needs and tailor our
+                    services to best fit your
+                    requirements.
+                  </p>
                 </div>
               </details>
             </li>
             <li class="process__item">
               <details class="process__accordion">
                 <summary class="process__accordion-header">
-                  <h3 class="process__accordion-title">Мониторинг и оптимизация</h3>
+                  <h3 class="process__accordion-title">Мониторинг и оптимизация
+                  </h3>
                   <span class="process__accordion-indicator"></span>
                 </summary>
                 <div class="process__accordion-body">
-                  <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+                  <p>During the initial consultation, we will discuss your business goals and objectives, target
+                    audience, and current marketing efforts. This will allow us to understand your needs and tailor our
+                    services to best fit your
+                    requirements.
+                  </p>
                 </div>
               </details>
             </li>
             <li class="process__item">
               <details class="process__accordion">
                 <summary class="process__accordion-header">
-                  <h3 class="process__accordion-title">Отчетность и коммуникация</h3>
+                  <h3 class="process__accordion-title">Отчетность и коммуникация
+                  </h3>
                   <span class="process__accordion-indicator"></span>
                 </summary>
                 <div class="process__accordion-body">
-                  <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+                  <p>During the initial consultation, we will discuss your business goals and objectives, target
+                    audience, and current marketing efforts. This will allow us to understand your needs and tailor our
+                    services to best fit your
+                    requirements.
+                  </p>
                 </div>
               </details>
             </li>
             <li class="process__item">
               <details class="process__accordion">
                 <summary class="process__accordion-header">
-                  <h3 class="process__accordion-title">Постоянное улучшение</h3>
+                  <h3 class="process__accordion-title">Постоянное улучшение
+                  </h3>
                   <span class="process__accordion-indicator"></span>
                 </summary>
                 <div class="process__accordion-body">
-                  <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+                  <p>During the initial consultation, we will discuss your business goals and objectives, target
+                    audience, and current marketing efforts. This will allow us to understand your needs and tailor our
+                    services to best fit your
+                    requirements.
+                  </p>
                 </div>
               </details>
             </li>
@@ -705,7 +762,8 @@
       </div>
     </section>
 
-    <section class="section container"><!-- TEAM -->
+    <section class="section container">
+      <!-- TEAM -->
       <header class="section__header">
         <h2 class="section__title puddle-bg">Наша команда</h2>
         <div class="section__description">
@@ -719,12 +777,8 @@
             <li class="team__item">
               <article class="team-card">
                 <header class="team-card__header">
-                  <img
-                    class="team-card__image"
-                    src="./images/team/team.png"
-                    alt=""
-                    width="100" height="100" loading="lazy"
-                  />
+                  <img class="team-card__image" src="./images/team/team.png" alt width="100" height="100"
+                    loading="lazy" />
                   <div class="team-card__info">
                     <h3 class="team-card__name h4">Маслов Евгений</h3>
                     <p class="team-card__post">должность</p>
@@ -732,8 +786,10 @@
                   <a class="team-card__link" href="/" target="_blank">
                     <span class="visually-hidden">Instagram</span>
                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="17" cy="17" r="17" fill="#1A1A1A"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0527 5.072C13.3324 5.01309 13.7404 5 17 5C20.2596 5 20.6676 5.01418 21.9462 5.072C23.2247 5.12982 24.0975 5.33382 24.8611 5.62945C25.6607 5.93164 26.3862 6.404 26.9862 7.01491C27.5971 7.61382 28.0684 8.33818 28.3695 9.13891C28.6662 9.90255 28.8691 10.7753 28.928 12.0516C28.9869 13.3335 29 13.7415 29 17C29 20.2596 28.9858 20.6676 28.928 21.9473C28.8702 23.2236 28.6662 24.0964 28.3695 24.86C28.0684 25.6608 27.5963 26.3864 26.9862 26.9862C26.3862 27.5971 25.6607 28.0684 24.8611 28.3695C24.0975 28.6662 23.2247 28.8691 21.9484 28.928C20.6676 28.9869 20.2596 29 17 29C13.7404 29 13.3324 28.9858 12.0527 28.928C10.7764 28.8702 9.90364 28.6662 9.14 28.3695C8.33919 28.0683 7.61362 27.5963 7.01382 26.9862C6.40332 26.3869 5.93089 25.6617 5.62945 24.8611C5.33382 24.0975 5.13091 23.2247 5.072 21.9484C5.01309 20.6665 5 20.2585 5 17C5 13.7404 5.01418 13.3324 5.072 12.0538C5.12982 10.7753 5.33382 9.90255 5.62945 9.13891C5.93133 8.33827 6.40413 7.61307 7.01491 7.01382C7.61386 6.40346 8.3387 5.93103 9.13891 5.62945C9.90255 5.33382 10.7753 5.13091 12.0516 5.072H12.0527ZM21.8491 7.232C20.5836 7.17418 20.204 7.16218 17 7.16218C13.796 7.16218 13.4164 7.17418 12.1509 7.232C10.9804 7.28545 10.3455 7.48073 9.92218 7.64545C9.36255 7.86364 8.96218 8.12218 8.54218 8.54218C8.14405 8.92951 7.83765 9.40104 7.64545 9.92218C7.48073 10.3455 7.28545 10.9804 7.232 12.1509C7.17418 13.4164 7.16218 13.796 7.16218 17C7.16218 20.204 7.17418 20.5836 7.232 21.8491C7.28545 23.0196 7.48073 23.6545 7.64545 24.0778C7.83745 24.5982 8.144 25.0705 8.54218 25.4578C8.92945 25.856 9.40182 26.1625 9.92218 26.3545C10.3455 26.5193 10.9804 26.7145 12.1509 26.768C13.4164 26.8258 13.7949 26.8378 17 26.8378C20.2051 26.8378 20.5836 26.8258 21.8491 26.768C23.0196 26.7145 23.6545 26.5193 24.0778 26.3545C24.6375 26.1364 25.0378 25.8778 25.4578 25.4578C25.856 25.0705 26.1625 24.5982 26.3545 24.0778C26.5193 23.6545 26.7145 23.0196 26.768 21.8491C26.8258 20.5836 26.8378 20.204 26.8378 17C26.8378 13.796 26.8258 13.4164 26.768 12.1509C26.7145 10.9804 26.5193 10.3455 26.3545 9.92218C26.1364 9.36255 25.8778 8.96218 25.4578 8.54218C25.0705 8.14408 24.5989 7.83768 24.0778 7.64545C23.6545 7.48073 23.0196 7.28545 21.8491 7.232ZM15.4673 20.6993C16.3233 21.0556 17.2764 21.1037 18.1639 20.8353C19.0514 20.567 19.8182 19.9988 20.3334 19.2279C20.8485 18.457 21.0801 17.5311 20.9884 16.6085C20.8968 15.6858 20.4876 14.8236 19.8309 14.1691C19.4123 13.7507 18.906 13.4303 18.3487 13.2311C17.7914 13.0318 17.1968 12.9586 16.6078 13.0167C16.0188 13.0748 15.45 13.2627 14.9423 13.5671C14.4347 13.8714 14.0008 14.2844 13.672 14.7766C13.3431 15.2687 13.1275 15.8276 13.0406 16.413C12.9536 16.9985 12.9976 17.596 13.1693 18.1624C13.341 18.7288 13.6362 19.2501 14.0335 19.6888C14.4309 20.1275 14.9205 20.4726 15.4673 20.6993ZM12.6385 12.6385C13.2113 12.0658 13.8913 11.6115 14.6396 11.3015C15.3879 10.9915 16.19 10.832 17 10.832C17.81 10.832 18.6121 10.9915 19.3604 11.3015C20.1087 11.6115 20.7887 12.0658 21.3615 12.6385C21.9342 13.2113 22.3885 13.8913 22.6985 14.6396C23.0085 15.3879 23.168 16.19 23.168 17C23.168 17.81 23.0085 18.6121 22.6985 19.3604C22.3885 20.1087 21.9342 20.7887 21.3615 21.3615C20.2047 22.5182 18.6359 23.168 17 23.168C15.3641 23.168 13.7953 22.5182 12.6385 21.3615C11.4818 20.2047 10.832 18.6359 10.832 17C10.832 15.3641 11.4818 13.7953 12.6385 12.6385ZM24.536 11.7505C24.6779 11.6167 24.7916 11.4557 24.8701 11.2771C24.9487 11.0985 24.9907 10.9059 24.9935 10.7108C24.9964 10.5157 24.9601 10.3221 24.8867 10.1412C24.8134 9.96044 24.7045 9.79619 24.5665 9.65822C24.4285 9.52026 24.2643 9.41137 24.0835 9.33802C23.9027 9.26467 23.709 9.22834 23.5139 9.23118C23.3188 9.23403 23.1263 9.27599 22.9477 9.35458C22.7691 9.43317 22.6081 9.54679 22.4742 9.68873C22.2138 9.96476 22.0712 10.3314 22.0768 10.7108C22.0823 11.0903 22.2355 11.4526 22.5038 11.7209C22.7721 11.9892 23.1345 12.1424 23.5139 12.148C23.8933 12.1535 24.26 12.0109 24.536 11.7505Z" fill="#91EE22"/>
+                      <circle cx="17" cy="17" r="17" fill="#1A1A1A" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.0527 5.072C13.3324 5.01309 13.7404 5 17 5C20.2596 5 20.6676 5.01418 21.9462 5.072C23.2247 5.12982 24.0975 5.33382 24.8611 5.62945C25.6607 5.93164 26.3862 6.404 26.9862 7.01491C27.5971 7.61382 28.0684 8.33818 28.3695 9.13891C28.6662 9.90255 28.8691 10.7753 28.928 12.0516C28.9869 13.3335 29 13.7415 29 17C29 20.2596 28.9858 20.6676 28.928 21.9473C28.8702 23.2236 28.6662 24.0964 28.3695 24.86C28.0684 25.6608 27.5963 26.3864 26.9862 26.9862C26.3862 27.5971 25.6607 28.0684 24.8611 28.3695C24.0975 28.6662 23.2247 28.8691 21.9484 28.928C20.6676 28.9869 20.2596 29 17 29C13.7404 29 13.3324 28.9858 12.0527 28.928C10.7764 28.8702 9.90364 28.6662 9.14 28.3695C8.33919 28.0683 7.61362 27.5963 7.01382 26.9862C6.40332 26.3869 5.93089 25.6617 5.62945 24.8611C5.33382 24.0975 5.13091 23.2247 5.072 21.9484C5.01309 20.6665 5 20.2585 5 17C5 13.7404 5.01418 13.3324 5.072 12.0538C5.12982 10.7753 5.33382 9.90255 5.62945 9.13891C5.93133 8.33827 6.40413 7.61307 7.01491 7.01382C7.61386 6.40346 8.3387 5.93103 9.13891 5.62945C9.90255 5.33382 10.7753 5.13091 12.0516 5.072H12.0527ZM21.8491 7.232C20.5836 7.17418 20.204 7.16218 17 7.16218C13.796 7.16218 13.4164 7.17418 12.1509 7.232C10.9804 7.28545 10.3455 7.48073 9.92218 7.64545C9.36255 7.86364 8.96218 8.12218 8.54218 8.54218C8.14405 8.92951 7.83765 9.40104 7.64545 9.92218C7.48073 10.3455 7.28545 10.9804 7.232 12.1509C7.17418 13.4164 7.16218 13.796 7.16218 17C7.16218 20.204 7.17418 20.5836 7.232 21.8491C7.28545 23.0196 7.48073 23.6545 7.64545 24.0778C7.83745 24.5982 8.144 25.0705 8.54218 25.4578C8.92945 25.856 9.40182 26.1625 9.92218 26.3545C10.3455 26.5193 10.9804 26.7145 12.1509 26.768C13.4164 26.8258 13.7949 26.8378 17 26.8378C20.2051 26.8378 20.5836 26.8258 21.8491 26.768C23.0196 26.7145 23.6545 26.5193 24.0778 26.3545C24.6375 26.1364 25.0378 25.8778 25.4578 25.4578C25.856 25.0705 26.1625 24.5982 26.3545 24.0778C26.5193 23.6545 26.7145 23.0196 26.768 21.8491C26.8258 20.5836 26.8378 20.204 26.8378 17C26.8378 13.796 26.8258 13.4164 26.768 12.1509C26.7145 10.9804 26.5193 10.3455 26.3545 9.92218C26.1364 9.36255 25.8778 8.96218 25.4578 8.54218C25.0705 8.14408 24.5989 7.83768 24.0778 7.64545C23.6545 7.48073 23.0196 7.28545 21.8491 7.232ZM15.4673 20.6993C16.3233 21.0556 17.2764 21.1037 18.1639 20.8353C19.0514 20.567 19.8182 19.9988 20.3334 19.2279C20.8485 18.457 21.0801 17.5311 20.9884 16.6085C20.8968 15.6858 20.4876 14.8236 19.8309 14.1691C19.4123 13.7507 18.906 13.4303 18.3487 13.2311C17.7914 13.0318 17.1968 12.9586 16.6078 13.0167C16.0188 13.0748 15.45 13.2627 14.9423 13.5671C14.4347 13.8714 14.0008 14.2844 13.672 14.7766C13.3431 15.2687 13.1275 15.8276 13.0406 16.413C12.9536 16.9985 12.9976 17.596 13.1693 18.1624C13.341 18.7288 13.6362 19.2501 14.0335 19.6888C14.4309 20.1275 14.9205 20.4726 15.4673 20.6993ZM12.6385 12.6385C13.2113 12.0658 13.8913 11.6115 14.6396 11.3015C15.3879 10.9915 16.19 10.832 17 10.832C17.81 10.832 18.6121 10.9915 19.3604 11.3015C20.1087 11.6115 20.7887 12.0658 21.3615 12.6385C21.9342 13.2113 22.3885 13.8913 22.6985 14.6396C23.0085 15.3879 23.168 16.19 23.168 17C23.168 17.81 23.0085 18.6121 22.6985 19.3604C22.3885 20.1087 21.9342 20.7887 21.3615 21.3615C20.2047 22.5182 18.6359 23.168 17 23.168C15.3641 23.168 13.7953 22.5182 12.6385 21.3615C11.4818 20.2047 10.832 18.6359 10.832 17C10.832 15.3641 11.4818 13.7953 12.6385 12.6385ZM24.536 11.7505C24.6779 11.6167 24.7916 11.4557 24.8701 11.2771C24.9487 11.0985 24.9907 10.9059 24.9935 10.7108C24.9964 10.5157 24.9601 10.3221 24.8867 10.1412C24.8134 9.96044 24.7045 9.79619 24.5665 9.65822C24.4285 9.52026 24.2643 9.41137 24.0835 9.33802C23.9027 9.26467 23.709 9.22834 23.5139 9.23118C23.3188 9.23403 23.1263 9.27599 22.9477 9.35458C22.7691 9.43317 22.6081 9.54679 22.4742 9.68873C22.2138 9.96476 22.0712 10.3314 22.0768 10.7108C22.0823 11.0903 22.2355 11.4526 22.5038 11.7209C22.7721 11.9892 23.1345 12.1424 23.5139 12.148C23.8933 12.1535 24.26 12.0109 24.536 11.7505Z"
+                        fill="#91EE22" />
                     </svg>
                   </a>
                 </header>
@@ -745,12 +801,8 @@
             <li class="team__item">
               <article class="team-card">
                 <header class="team-card__header">
-                  <img
-                    class="team-card__image"
-                    src="./images/team/team-2.png"
-                    alt=""
-                    width="100" height="100" loading="lazy"
-                  />
+                  <img class="team-card__image" src="./images/team/team-2.png" alt width="100" height="100"
+                    loading="lazy" />
                   <div class="team-card__info">
                     <h3 class="team-card__name h4">Михайлова Татьяна</h3>
                     <p class="team-card__post">Директор</p>
@@ -758,10 +810,14 @@
                   <a class="team-card__link" href="/" target="_blank">
                     <span class="visually-hidden">LinkedIn</span>
                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="17" cy="17" r="17" fill="#1A1A1A"/>
-                      <path d="M9.31776 25H12.8131V13.6844H9.31776V25Z" fill="#91EE22"/>
-                      <path d="M9 10.0719C9 11.1875 9.90031 12.0906 11.0654 12.0906C12.1776 12.0906 13.0779 11.1875 13.0779 10.0719C13.0779 8.95625 12.1776 8 11.0654 8C9.90031 8 9 8.95625 9 10.0719Z" fill="#91EE22"/>
-                      <path d="M22.4517 25H26V18.7844C26 15.7562 25.3115 13.3656 21.7632 13.3656C20.0685 13.3656 18.9034 14.3219 18.4268 15.225H18.3738V13.6844H15.0374V25H18.5327V19.4219C18.5327 17.9344 18.7975 16.5 20.6511 16.5C22.4517 16.5 22.4517 18.2 22.4517 19.475V25Z" fill="#91EE22"/>
+                      <circle cx="17" cy="17" r="17" fill="#1A1A1A" />
+                      <path d="M9.31776 25H12.8131V13.6844H9.31776V25Z" fill="#91EE22" />
+                      <path
+                        d="M9 10.0719C9 11.1875 9.90031 12.0906 11.0654 12.0906C12.1776 12.0906 13.0779 11.1875 13.0779 10.0719C13.0779 8.95625 12.1776 8 11.0654 8C9.90031 8 9 8.95625 9 10.0719Z"
+                        fill="#91EE22" />
+                      <path
+                        d="M22.4517 25H26V18.7844C26 15.7562 25.3115 13.3656 21.7632 13.3656C20.0685 13.3656 18.9034 14.3219 18.4268 15.225H18.3738V13.6844H15.0374V25H18.5327V19.4219C18.5327 17.9344 18.7975 16.5 20.6511 16.5C22.4517 16.5 22.4517 18.2 22.4517 19.475V25Z"
+                        fill="#91EE22" />
                     </svg>
                   </a>
                 </header>
@@ -773,12 +829,8 @@
             <li class="team__item">
               <article class="team-card">
                 <header class="team-card__header">
-                  <img
-                    class="team-card__image"
-                    src="./images/team/team-3.png"
-                    alt=""
-                    width="100" height="100" loading="lazy"
-                  />
+                  <img class="team-card__image" src="./images/team/team-3.png" alt width="100" height="100"
+                    loading="lazy" />
                   <div class="team-card__info">
                     <h3 class="team-card__name h4">Иванов Иван</h3>
                     <p class="team-card__post">должность</p>
@@ -786,8 +838,10 @@
                   <a class="team-card__link" href="/" target="_blank">
                     <span class="visually-hidden">Instagram</span>
                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="17" cy="17" r="17" fill="#1A1A1A"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0527 5.072C13.3324 5.01309 13.7404 5 17 5C20.2596 5 20.6676 5.01418 21.9462 5.072C23.2247 5.12982 24.0975 5.33382 24.8611 5.62945C25.6607 5.93164 26.3862 6.404 26.9862 7.01491C27.5971 7.61382 28.0684 8.33818 28.3695 9.13891C28.6662 9.90255 28.8691 10.7753 28.928 12.0516C28.9869 13.3335 29 13.7415 29 17C29 20.2596 28.9858 20.6676 28.928 21.9473C28.8702 23.2236 28.6662 24.0964 28.3695 24.86C28.0684 25.6608 27.5963 26.3864 26.9862 26.9862C26.3862 27.5971 25.6607 28.0684 24.8611 28.3695C24.0975 28.6662 23.2247 28.8691 21.9484 28.928C20.6676 28.9869 20.2596 29 17 29C13.7404 29 13.3324 28.9858 12.0527 28.928C10.7764 28.8702 9.90364 28.6662 9.14 28.3695C8.33919 28.0683 7.61362 27.5963 7.01382 26.9862C6.40332 26.3869 5.93089 25.6617 5.62945 24.8611C5.33382 24.0975 5.13091 23.2247 5.072 21.9484C5.01309 20.6665 5 20.2585 5 17C5 13.7404 5.01418 13.3324 5.072 12.0538C5.12982 10.7753 5.33382 9.90255 5.62945 9.13891C5.93133 8.33827 6.40413 7.61307 7.01491 7.01382C7.61386 6.40346 8.3387 5.93103 9.13891 5.62945C9.90255 5.33382 10.7753 5.13091 12.0516 5.072H12.0527ZM21.8491 7.232C20.5836 7.17418 20.204 7.16218 17 7.16218C13.796 7.16218 13.4164 7.17418 12.1509 7.232C10.9804 7.28545 10.3455 7.48073 9.92218 7.64545C9.36255 7.86364 8.96218 8.12218 8.54218 8.54218C8.14405 8.92951 7.83765 9.40104 7.64545 9.92218C7.48073 10.3455 7.28545 10.9804 7.232 12.1509C7.17418 13.4164 7.16218 13.796 7.16218 17C7.16218 20.204 7.17418 20.5836 7.232 21.8491C7.28545 23.0196 7.48073 23.6545 7.64545 24.0778C7.83745 24.5982 8.144 25.0705 8.54218 25.4578C8.92945 25.856 9.40182 26.1625 9.92218 26.3545C10.3455 26.5193 10.9804 26.7145 12.1509 26.768C13.4164 26.8258 13.7949 26.8378 17 26.8378C20.2051 26.8378 20.5836 26.8258 21.8491 26.768C23.0196 26.7145 23.6545 26.5193 24.0778 26.3545C24.6375 26.1364 25.0378 25.8778 25.4578 25.4578C25.856 25.0705 26.1625 24.5982 26.3545 24.0778C26.5193 23.6545 26.7145 23.0196 26.768 21.8491C26.8258 20.5836 26.8378 20.204 26.8378 17C26.8378 13.796 26.8258 13.4164 26.768 12.1509C26.7145 10.9804 26.5193 10.3455 26.3545 9.92218C26.1364 9.36255 25.8778 8.96218 25.4578 8.54218C25.0705 8.14408 24.5989 7.83768 24.0778 7.64545C23.6545 7.48073 23.0196 7.28545 21.8491 7.232ZM15.4673 20.6993C16.3233 21.0556 17.2764 21.1037 18.1639 20.8353C19.0514 20.567 19.8182 19.9988 20.3334 19.2279C20.8485 18.457 21.0801 17.5311 20.9884 16.6085C20.8968 15.6858 20.4876 14.8236 19.8309 14.1691C19.4123 13.7507 18.906 13.4303 18.3487 13.2311C17.7914 13.0318 17.1968 12.9586 16.6078 13.0167C16.0188 13.0748 15.45 13.2627 14.9423 13.5671C14.4347 13.8714 14.0008 14.2844 13.672 14.7766C13.3431 15.2687 13.1275 15.8276 13.0406 16.413C12.9536 16.9985 12.9976 17.596 13.1693 18.1624C13.341 18.7288 13.6362 19.2501 14.0335 19.6888C14.4309 20.1275 14.9205 20.4726 15.4673 20.6993ZM12.6385 12.6385C13.2113 12.0658 13.8913 11.6115 14.6396 11.3015C15.3879 10.9915 16.19 10.832 17 10.832C17.81 10.832 18.6121 10.9915 19.3604 11.3015C20.1087 11.6115 20.7887 12.0658 21.3615 12.6385C21.9342 13.2113 22.3885 13.8913 22.6985 14.6396C23.0085 15.3879 23.168 16.19 23.168 17C23.168 17.81 23.0085 18.6121 22.6985 19.3604C22.3885 20.1087 21.9342 20.7887 21.3615 21.3615C20.2047 22.5182 18.6359 23.168 17 23.168C15.3641 23.168 13.7953 22.5182 12.6385 21.3615C11.4818 20.2047 10.832 18.6359 10.832 17C10.832 15.3641 11.4818 13.7953 12.6385 12.6385ZM24.536 11.7505C24.6779 11.6167 24.7916 11.4557 24.8701 11.2771C24.9487 11.0985 24.9907 10.9059 24.9935 10.7108C24.9964 10.5157 24.9601 10.3221 24.8867 10.1412C24.8134 9.96044 24.7045 9.79619 24.5665 9.65822C24.4285 9.52026 24.2643 9.41137 24.0835 9.33802C23.9027 9.26467 23.709 9.22834 23.5139 9.23118C23.3188 9.23403 23.1263 9.27599 22.9477 9.35458C22.7691 9.43317 22.6081 9.54679 22.4742 9.68873C22.2138 9.96476 22.0712 10.3314 22.0768 10.7108C22.0823 11.0903 22.2355 11.4526 22.5038 11.7209C22.7721 11.9892 23.1345 12.1424 23.5139 12.148C23.8933 12.1535 24.26 12.0109 24.536 11.7505Z" fill="#91EE22"/>
+                      <circle cx="17" cy="17" r="17" fill="#1A1A1A" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.0527 5.072C13.3324 5.01309 13.7404 5 17 5C20.2596 5 20.6676 5.01418 21.9462 5.072C23.2247 5.12982 24.0975 5.33382 24.8611 5.62945C25.6607 5.93164 26.3862 6.404 26.9862 7.01491C27.5971 7.61382 28.0684 8.33818 28.3695 9.13891C28.6662 9.90255 28.8691 10.7753 28.928 12.0516C28.9869 13.3335 29 13.7415 29 17C29 20.2596 28.9858 20.6676 28.928 21.9473C28.8702 23.2236 28.6662 24.0964 28.3695 24.86C28.0684 25.6608 27.5963 26.3864 26.9862 26.9862C26.3862 27.5971 25.6607 28.0684 24.8611 28.3695C24.0975 28.6662 23.2247 28.8691 21.9484 28.928C20.6676 28.9869 20.2596 29 17 29C13.7404 29 13.3324 28.9858 12.0527 28.928C10.7764 28.8702 9.90364 28.6662 9.14 28.3695C8.33919 28.0683 7.61362 27.5963 7.01382 26.9862C6.40332 26.3869 5.93089 25.6617 5.62945 24.8611C5.33382 24.0975 5.13091 23.2247 5.072 21.9484C5.01309 20.6665 5 20.2585 5 17C5 13.7404 5.01418 13.3324 5.072 12.0538C5.12982 10.7753 5.33382 9.90255 5.62945 9.13891C5.93133 8.33827 6.40413 7.61307 7.01491 7.01382C7.61386 6.40346 8.3387 5.93103 9.13891 5.62945C9.90255 5.33382 10.7753 5.13091 12.0516 5.072H12.0527ZM21.8491 7.232C20.5836 7.17418 20.204 7.16218 17 7.16218C13.796 7.16218 13.4164 7.17418 12.1509 7.232C10.9804 7.28545 10.3455 7.48073 9.92218 7.64545C9.36255 7.86364 8.96218 8.12218 8.54218 8.54218C8.14405 8.92951 7.83765 9.40104 7.64545 9.92218C7.48073 10.3455 7.28545 10.9804 7.232 12.1509C7.17418 13.4164 7.16218 13.796 7.16218 17C7.16218 20.204 7.17418 20.5836 7.232 21.8491C7.28545 23.0196 7.48073 23.6545 7.64545 24.0778C7.83745 24.5982 8.144 25.0705 8.54218 25.4578C8.92945 25.856 9.40182 26.1625 9.92218 26.3545C10.3455 26.5193 10.9804 26.7145 12.1509 26.768C13.4164 26.8258 13.7949 26.8378 17 26.8378C20.2051 26.8378 20.5836 26.8258 21.8491 26.768C23.0196 26.7145 23.6545 26.5193 24.0778 26.3545C24.6375 26.1364 25.0378 25.8778 25.4578 25.4578C25.856 25.0705 26.1625 24.5982 26.3545 24.0778C26.5193 23.6545 26.7145 23.0196 26.768 21.8491C26.8258 20.5836 26.8378 20.204 26.8378 17C26.8378 13.796 26.8258 13.4164 26.768 12.1509C26.7145 10.9804 26.5193 10.3455 26.3545 9.92218C26.1364 9.36255 25.8778 8.96218 25.4578 8.54218C25.0705 8.14408 24.5989 7.83768 24.0778 7.64545C23.6545 7.48073 23.0196 7.28545 21.8491 7.232ZM15.4673 20.6993C16.3233 21.0556 17.2764 21.1037 18.1639 20.8353C19.0514 20.567 19.8182 19.9988 20.3334 19.2279C20.8485 18.457 21.0801 17.5311 20.9884 16.6085C20.8968 15.6858 20.4876 14.8236 19.8309 14.1691C19.4123 13.7507 18.906 13.4303 18.3487 13.2311C17.7914 13.0318 17.1968 12.9586 16.6078 13.0167C16.0188 13.0748 15.45 13.2627 14.9423 13.5671C14.4347 13.8714 14.0008 14.2844 13.672 14.7766C13.3431 15.2687 13.1275 15.8276 13.0406 16.413C12.9536 16.9985 12.9976 17.596 13.1693 18.1624C13.341 18.7288 13.6362 19.2501 14.0335 19.6888C14.4309 20.1275 14.9205 20.4726 15.4673 20.6993ZM12.6385 12.6385C13.2113 12.0658 13.8913 11.6115 14.6396 11.3015C15.3879 10.9915 16.19 10.832 17 10.832C17.81 10.832 18.6121 10.9915 19.3604 11.3015C20.1087 11.6115 20.7887 12.0658 21.3615 12.6385C21.9342 13.2113 22.3885 13.8913 22.6985 14.6396C23.0085 15.3879 23.168 16.19 23.168 17C23.168 17.81 23.0085 18.6121 22.6985 19.3604C22.3885 20.1087 21.9342 20.7887 21.3615 21.3615C20.2047 22.5182 18.6359 23.168 17 23.168C15.3641 23.168 13.7953 22.5182 12.6385 21.3615C11.4818 20.2047 10.832 18.6359 10.832 17C10.832 15.3641 11.4818 13.7953 12.6385 12.6385ZM24.536 11.7505C24.6779 11.6167 24.7916 11.4557 24.8701 11.2771C24.9487 11.0985 24.9907 10.9059 24.9935 10.7108C24.9964 10.5157 24.9601 10.3221 24.8867 10.1412C24.8134 9.96044 24.7045 9.79619 24.5665 9.65822C24.4285 9.52026 24.2643 9.41137 24.0835 9.33802C23.9027 9.26467 23.709 9.22834 23.5139 9.23118C23.3188 9.23403 23.1263 9.27599 22.9477 9.35458C22.7691 9.43317 22.6081 9.54679 22.4742 9.68873C22.2138 9.96476 22.0712 10.3314 22.0768 10.7108C22.0823 11.0903 22.2355 11.4526 22.5038 11.7209C22.7721 11.9892 23.1345 12.1424 23.5139 12.148C23.8933 12.1535 24.26 12.0109 24.536 11.7505Z"
+                        fill="#91EE22" />
                     </svg>
                   </a>
                 </header>
@@ -801,7 +855,8 @@
       </div>
     </section>
 
-    <section class="section container"><!-- blog -->
+    <section class="section container">
+      <!-- blog -->
       <header class="section__header">
         <h2 class="section__title puddle-bg">новости</h2>
       </header>
@@ -809,33 +864,40 @@
         <div class="blog">
           <ul class="blog__list">
             <li class="blog__item">
-              <img class="blog__item-image" src="./images/news/news-1.png" alt="" width="244" height="244">
+              <img class="blog__item-image" src="./images/news/news-1.png" alt width="244" height="244">
               <date class="blog__item-date">August 27, 2023</date>
-              <h3 class="blog__item-title">Советы по брендингу для малого бизнеса</h3>
-              <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id arcu lacus cras nullam ut sed orci aenean. Mi facilisi etiam duis ac. Praesent ut aliquam posuere sit. Nibh eget risus nibh tincidunt.</p>
+              <h3 class="blog__item-title">Советы по брендингу для малого бизнеса
+              </h3>
+              <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id arcu lacus
+                cras nullam ut sed orci aenean. Mi facilisi etiam duis ac. Praesent ut aliquam posuere sit. Nibh eget
+                risus nibh tincidunt.</p>
               <a href="/" class="blog__item-link">
                 <span>Читать подробнее</span>
-                <img src="./images/icons/arrow-top-right.svg" alt="" width="32" height="32">
+                <img src="./images/icons/arrow-top-right.svg" alt width="32" height="32">
               </a>
             </li>
             <li class="blog__item">
-              <img class="blog__item-image" src="./images/news/news-2.png" alt="" width="244" height="244">
+              <img class="blog__item-image" src="./images/news/news-2.png" alt width="244" height="244">
               <date class="blog__item-date">August 27, 2023</date>
               <h3 class="blog__item-title">Кейсы клиентов с процессом создания их бренда</h3>
-              <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id arcu lacus cras nullam ut sed orci aenean. Mi facilisi etiam duis ac. Praesent ut aliquam posuere sit. Nibh eget risus nibh tincidunt.</p>
+              <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id arcu lacus
+                cras nullam ut sed orci aenean. Mi facilisi etiam duis ac. Praesent ut aliquam posuere sit. Nibh eget
+                risus nibh tincidunt.</p>
               <a href="/" class="blog__item-link">
                 <span>Читать подробнее</span>
-                <img src="./images/icons/arrow-top-right.svg" alt="" width="32" height="32">
+                <img src="./images/icons/arrow-top-right.svg" alt width="32" height="32">
               </a>
             </li>
             <li class="blog__item">
-              <img class="blog__item-image" src="./images/news/news-3.png" alt="" width="244" height="244">
+              <img class="blog__item-image" src="./images/news/news-3.png" alt width="244" height="244">
               <date class="blog__item-date">August 27, 2023</date>
               <h3 class="blog__item-title">Статьи о трендах брендинга</h3>
-              <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id arcu lacus cras nullam ut sed orci aenean. Mi facilisi etiam duis ac. Praesent ut aliquam posuere sit. Nibh eget risus nibh tincidunt.</p>
+              <p class="blog__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id arcu lacus
+                cras nullam ut sed orci aenean. Mi facilisi etiam duis ac. Praesent ut aliquam posuere sit. Nibh eget
+                risus nibh tincidunt.</p>
               <a href="/" class="blog__item-link">
                 <span>Читать подробнее</span>
-                <img src="./images/icons/arrow-top-right.svg" alt="" width="32" height="32">
+                <img src="./images/icons/arrow-top-right.svg" alt width="32" height="32">
               </a>
             </li>
           </ul>
@@ -843,13 +905,16 @@
       </div>
     </section>
 
-    <section class="section container"><!-- CONTACTS -->
+    <section class="section container">
+      <!-- CONTACTS -->
       <div class="section__body">
         <div class="contact-us">
           <header class="section__header">
             <h2 class="section__title puddle-bg">связаться с нами</h2>
             <div class="section__description">
-              <p>Просто оставьте свой номер телефона и наш менеджер с вами свяжется. Или напишите нам в <span>WhatsApp<span></p>
+              <p>Просто оставьте свой номер телефона и наш менеджер с вами свяжется. Или напишите нам в
+                <span>WhatsApp<span>
+              </p>
             </div>
           </header>
 
@@ -857,20 +922,27 @@
             <div class="contact-us__body">
               <div class="contact-us__field field">
                 <label class="field__label" for="contact-us__name">Имя*</label>
-                <input class="field__input" id="contact-us__name" name="name" type="text" placeholder="Иван" required autocomplete/>
+                <input class="field__input" id="contact-us__name" name="name" type="text" placeholder="Иван" required
+                  autocomplete />
               </div>
               <div class="contact-us__field field">
-                <label class="field__label" for="contact-us__phone">Номер телефона*</label>
-                <input class="field__input" id="contact-us__phone" name="phone" placeholder="+7 999 999 99 99" required autocomplete pattern="[0-9\+]*" />
+                <label class="field__label" for="contact-us__phone">Номер
+                  телефона*</label>
+                <input class="field__input" id="contact-us__phone" name="phone" placeholder="+7 999 999 99 99" required
+                  autocomplete pattern="[0-9\+]*" />
               </div>
               <div class="contact-us__field field">
                 <label class="field__label" for="contact-us__message">Комментарий</label>
-                <textarea class="field__input field__input--textarea" id="contact-us__message" name="message" placeholder="Ваш комментарий"></textarea>
+                <textarea class="field__input field__input--textarea" id="contact-us__message" name="message"
+                  placeholder="Ваш комментарий"></textarea>
               </div>
             </div>
             <div class="contact-us__accept checkbox">
               <input class="checkbox__input" type="checkbox" required>
-              <label class="contact-us__accept-description checkbox__label">Я соглашаюсь с <a href="https://kaltmann.ru/policy" target="_blank">политикой конфиденциальности</a><br>и даю <a href="https://kaltmann.ru/agree" target="_blank">согласие</a> на обработку персональных данных</label>
+              <label class="contact-us__accept-description checkbox__label">Я
+                соглашаюсь с <a href="https://kaltmann.ru/policy" target="_blank">политикой конфиденциальности</a><br>и
+                даю <a href="https://kaltmann.ru/agree" target="_blank">согласие</a> на обработку персональных
+                данных</label>
             </div>
             <button class="contact-us__button button" type="submit">
               отправить запрос
@@ -888,16 +960,21 @@
         <div class="routes">
           <div class="routes__map">
             <!-- TODO переделать на карту с нужными точками/адресами -->
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aec7d1fb8b2e0fa607c83baf2eda185ca9ff1f1f6fc6fe44b3bc63863f0365d17&amp;source=constructor" width="634" height="328" frameborder="0"></iframe>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aec7d1fb8b2e0fa607c83baf2eda185ca9ff1f1f6fc6fe44b3bc63863f0365d17&amp;source=constructor"
+              width="634" height="328" frameborder="0"></iframe>
           </div>
           <div class="routes__body">
-            <h2 class="section__title puddle-bg routes__title">как до нас добраться?</h2>
-            <p class="routes__description">Будем рады выпить чашечку кофе у нас в офисе за обсуждением вашего проекта!</p>
+            <h2 class="section__title puddle-bg routes__title">как до нас
+              добраться?</h2>
+            <p class="routes__description">Будем рады выпить чашечку кофе
+              у нас в офисе за обсуждением вашего проекта!</p>
             <address class="routes__address">
               <p>Москва, ул. Лесная 3</p>
               <p>Санкт-Петербург, ул. Михайловская 1/7</p>
             </address>
-            <a href="tel:88000000000" class="routes__phone">8 800 000 00 00</a>
+            <a href="tel:88000000000" class="routes__phone">8 800 000 00
+              00</a>
             <p class="routes__time">Пн-Вс с 8:00 до 21:00</p>
           </div>
         </div>
@@ -910,12 +987,8 @@
     <div class="footer__inner">
       <div class="footer__navigation">
         <a class="footer__logo logo" href="/">
-          <img
-            class="logo__image"
-            src="./images/logo-light.svg"
-            alt="BrandFast"
-            width="180" height="29" loading="lazy"
-          />
+          <img class="logo__image" src="./images/logo-light.svg" alt="BrandFast" width="180" height="29"
+            loading="lazy" />
         </a>
         <nav class="footer__menu">
           <ul class="footer__menu-list">
@@ -924,20 +997,23 @@
               <a class="footer__menu-link" href="/">
                 <span>услуги</span>
                 <div class="footer__submenu-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 15L8 11L16 11L12 15Z" />
                   </svg>
                 </div>
               </a>
               <ul class="footer__submenu-list hidden">
                 <li class="footer__submenu-item">
-                  <a href="#" class="footer__submenu-link"><span>разработка логотипа</span></a>
+                  <a href="#" class="footer__submenu-link"><span>разработка
+                      логотипа</span></a>
                 </li>
                 <li class="footer__submenu-item">
-                  <a href="#" class="footer__submenu-link"><span>фирменный стиль</span></a>
+                  <a href="#" class="footer__submenu-link"><span>фирменный
+                      стиль</span></a>
                 </li>
                 <li class="footer__submenu-item">
-                  <a href="#" class="footer__submenu-link"><span>бренд с нуля</span></a>
+                  <a href="#" class="footer__submenu-link"><span>бренд с
+                      нуля</span></a>
                 </li>
                 <li class="footer__submenu-item">
                   <a href="#" class="footer__submenu-link"><span>нейминг</span></a>
@@ -957,7 +1033,8 @@
               <a class="footer__menu-link" href="/">портфолио</a>
             </li>
             <li class="footer__menu-item">
-              <a class="footer__menu-link" href="/">отзывы наших клиентов</a>
+              <a class="footer__menu-link" href="/">отзывы наших
+                клиентов</a>
             </li>
             <li class="footer__menu-item">
               <a class="footer__menu-link" href="/">новости</a>
@@ -970,20 +1047,27 @@
               <a class="soc1als__link" href="/">
                 <span class="visually-hidden">LinkedIn</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.22154 15.0586H4.30565V5.07422H1.22154V15.0586Z" fill="#1A1A1A"/>
-                  <path d="M0.941162 1.88672C0.941162 2.87109 1.73555 3.66797 2.76359 3.66797C3.7449 3.66797 4.53929 2.87109 4.53929 1.88672C4.53929 0.902344 3.7449 0.0585938 2.76359 0.0585938C1.73555 0.0585938 0.941162 0.902344 0.941162 1.88672Z" fill="#1A1A1A"/>
-                  <path d="M12.8103 15.0586H15.9412V9.57422C15.9412 6.90234 15.3337 4.79297 12.2028 4.79297C10.7075 4.79297 9.67948 5.63672 9.25892 6.43359H9.21219V5.07422H6.26826V15.0586H9.35238V10.1367C9.35238 8.82422 9.58602 7.55859 11.2215 7.55859C12.8103 7.55859 12.8103 9.05859 12.8103 10.1836V15.0586Z" fill="#1A1A1A"/>
+                  <path d="M1.22154 15.0586H4.30565V5.07422H1.22154V15.0586Z" fill="#1A1A1A" />
+                  <path
+                    d="M0.941162 1.88672C0.941162 2.87109 1.73555 3.66797 2.76359 3.66797C3.7449 3.66797 4.53929 2.87109 4.53929 1.88672C4.53929 0.902344 3.7449 0.0585938 2.76359 0.0585938C1.73555 0.0585938 0.941162 0.902344 0.941162 1.88672Z"
+                    fill="#1A1A1A" />
+                  <path
+                    d="M12.8103 15.0586H15.9412V9.57422C15.9412 6.90234 15.3337 4.79297 12.2028 4.79297C10.7075 4.79297 9.67948 5.63672 9.25892 6.43359H9.21219V5.07422H6.26826V15.0586H9.35238V10.1367C9.35238 8.82422 9.58602 7.55859 11.2215 7.55859C12.8103 7.55859 12.8103 9.05859 12.8103 10.1836V15.0586Z"
+                    fill="#1A1A1A" />
                 </svg>
               </a>
             </li>
             <li class="soc1als__item">
               <a class="soc1als__link" href="/">
                 <span class="visually-hidden">Facebook</span>
-                <svg width="800px" height="800px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg width="800px" height="800px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#000000">
                       <g id="icons" transform="translate(56.000000, 160.000000)">
-                        <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" id="facebook-[#176]">
+                        <path
+                          d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                          id="facebook-[#176]">
 
                         </path>
                       </g>
@@ -996,7 +1080,9 @@
               <a class="soc1als__link" href="/">
                 <span class="visually-hidden">Twitter</span>
                 <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15.9961 4.4915C16.6854 3.97449 17.3058 3.35409 17.7884 2.63028C17.168 2.90602 16.4442 3.11282 15.7204 3.18176C16.4786 2.73369 17.0301 2.04435 17.3058 1.18267C16.6165 1.59628 15.8238 1.90648 15.031 2.07881C14.3417 1.35501 13.4111 0.941406 12.3771 0.941406C10.378 0.941406 8.75804 2.56135 8.75804 4.56043C8.75804 4.83617 8.79251 5.1119 8.86144 5.38764C5.86282 5.2153 3.1744 3.76769 1.38212 1.59628C1.07192 2.11328 0.899586 2.73369 0.899586 3.42302C0.899586 4.66383 1.51999 5.76677 2.51953 6.42165C1.93359 6.38718 1.34766 6.24931 0.86512 5.97358V6.00804C0.86512 7.76585 2.10593 9.21346 3.76034 9.55813C3.48461 9.62707 3.13994 9.696 2.82973 9.696C2.58847 9.696 2.38166 9.66154 2.1404 9.62707C2.58847 11.0747 3.93267 12.1087 5.51815 12.1432C4.27734 13.1082 2.72633 13.6942 1.03745 13.6942C0.727252 13.6942 0.451517 13.6597 0.175781 13.6252C1.76126 14.6592 3.65694 15.2452 5.72495 15.2452C12.3771 15.2452 15.9961 9.76494 15.9961 4.97403C15.9961 4.8017 15.9961 4.66383 15.9961 4.4915Z" fill="black"/>
+                  <path
+                    d="M15.9961 4.4915C16.6854 3.97449 17.3058 3.35409 17.7884 2.63028C17.168 2.90602 16.4442 3.11282 15.7204 3.18176C16.4786 2.73369 17.0301 2.04435 17.3058 1.18267C16.6165 1.59628 15.8238 1.90648 15.031 2.07881C14.3417 1.35501 13.4111 0.941406 12.3771 0.941406C10.378 0.941406 8.75804 2.56135 8.75804 4.56043C8.75804 4.83617 8.79251 5.1119 8.86144 5.38764C5.86282 5.2153 3.1744 3.76769 1.38212 1.59628C1.07192 2.11328 0.899586 2.73369 0.899586 3.42302C0.899586 4.66383 1.51999 5.76677 2.51953 6.42165C1.93359 6.38718 1.34766 6.24931 0.86512 5.97358V6.00804C0.86512 7.76585 2.10593 9.21346 3.76034 9.55813C3.48461 9.62707 3.13994 9.696 2.82973 9.696C2.58847 9.696 2.38166 9.66154 2.1404 9.62707C2.58847 11.0747 3.93267 12.1087 5.51815 12.1432C4.27734 13.1082 2.72633 13.6942 1.03745 13.6942C0.727252 13.6942 0.451517 13.6597 0.175781 13.6252C1.76126 14.6592 3.65694 15.2452 5.72495 15.2452C12.3771 15.2452 15.9961 9.76494 15.9961 4.97403C15.9961 4.8017 15.9961 4.66383 15.9961 4.4915Z"
+                    fill="black" />
                 </svg>
               </a>
             </li>
@@ -1004,10 +1090,15 @@
               <a class="soc1als__link" href="/">
                 <span class="visually-hidden">Telegram</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.87502 10.537L13.8998 16.7188C13.9811 16.7903 14.0795 16.8395 14.1855 16.8615C14.2916 16.8836 14.4015 16.8777 14.5045 16.8445C14.6075 16.8112 14.7002 16.7518 14.7734 16.672C14.8465 16.5922 14.8977 16.4948 14.9219 16.3892L17.8605 3.56637C17.8859 3.4555 17.8805 3.3398 17.8451 3.23174C17.8096 3.12368 17.7453 3.02735 17.6591 2.95314C17.5729 2.87892 17.4681 2.82963 17.3559 2.81059C17.2438 2.79154 17.1286 2.80345 17.0227 2.84504L2.60423 8.50945C2.47857 8.55882 2.37227 8.64755 2.30125 8.76236C2.23022 8.87718 2.19828 9.01191 2.21021 9.14639C2.22214 9.28087 2.27729 9.40788 2.36742 9.5084C2.45755 9.60892 2.5778 9.67755 2.71019 9.70403L6.87502 10.537Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.875 10.5369L17.5088 2.85693" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M10.3834 13.6245L7.94194 16.0659C7.85453 16.1533 7.74317 16.2128 7.62193 16.2369C7.50069 16.2611 7.37503 16.2487 7.26082 16.2014C7.14662 16.1541 7.04901 16.074 6.98033 15.9712C6.91166 15.8684 6.875 15.7476 6.875 15.624V10.5371" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                  <path
+                    d="M6.87502 10.537L13.8998 16.7188C13.9811 16.7903 14.0795 16.8395 14.1855 16.8615C14.2916 16.8836 14.4015 16.8777 14.5045 16.8445C14.6075 16.8112 14.7002 16.7518 14.7734 16.672C14.8465 16.5922 14.8977 16.4948 14.9219 16.3892L17.8605 3.56637C17.8859 3.4555 17.8805 3.3398 17.8451 3.23174C17.8096 3.12368 17.7453 3.02735 17.6591 2.95314C17.5729 2.87892 17.4681 2.82963 17.3559 2.81059C17.2438 2.79154 17.1286 2.80345 17.0227 2.84504L2.60423 8.50945C2.47857 8.55882 2.37227 8.64755 2.30125 8.76236C2.23022 8.87718 2.19828 9.01191 2.21021 9.14639C2.22214 9.28087 2.27729 9.40788 2.36742 9.5084C2.45755 9.60892 2.5778 9.67755 2.71019 9.70403L6.87502 10.537Z"
+                    stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.875 10.5369L17.5088 2.85693" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M10.3834 13.6245L7.94194 16.0659C7.85453 16.1533 7.74317 16.2128 7.62193 16.2369C7.50069 16.2611 7.37503 16.2487 7.26082 16.2014C7.14662 16.1541 7.04901 16.074 6.98033 15.9712C6.91166 15.8684 6.875 15.7476 6.875 15.624V10.5371"
+                    stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </a>
             </li>
           </ul>
@@ -1025,27 +1116,19 @@
           <h2 class="visually-hidden">Подписаться на новости</h2>
           <div class="subscribe-form__field field field--big-height field--dark-bg">
             <label class="field__label visually-hidden" for="subscribe-email">Email</label>
-            <input
-              class="field__input"
-              id="subscribe-email"
-              name="email"
-              placeholder="Email"
-              type="email"
-              required
-            />
+            <input class="field__input" id="subscribe-email" name="email" placeholder="Email" type="email" required />
           </div>
-          <button
-            class="subscribe-form__button button button--accent"
-            type="submit"
-          >
-          подписаться на новости
+          <button class="subscribe-form__button button button--accent" type="submit">
+            подписаться на новости
           </button>
         </form>
       </div>
       <div class="footer__extra">
-        <p class="footer__copyright">© <time datetime="2025">2025</time> BrandFast</p>
+        <p class="footer__copyright">© <time datetime="2025">2025</time> BrandFast
+        </p>
         <p class="footer__ip">ИП: Иванов И.И.<br>ОГРН: 12345678</p>
-        <a class="footer__privacy-policy-link" href="https://kaltmann.ru/policy" target="_blank">политика конфиденциальности</a>
+        <a class="footer__privacy-policy-link" href="https://kaltmann.ru/policy" target="_blank">политика
+          конфиденциальности</a>
         <button class="footer__callback button button--light" type="button">заказать обратный звонок</button>
       </div>
     </div>
@@ -1053,10 +1136,7 @@
 
   <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
     <form class="mobile-overlay__close-button-wrapper" method="dialog">
-      <button
-        class="mobile-overlay__close-button cross-button"
-        type="submit"
-      >
+      <button class="mobile-overlay__close-button cross-button" type="submit">
         <span class="visually-hidden">Close navigation menu</span>
       </button>
     </form>
@@ -1083,6 +1163,7 @@
 
   <script type="module" src="./scripts/index.js"></script>
   <script src="./scripts/swiper-bundle.min.js"></script>
-  <script  src="./scripts/swiper.js"></script>
+  <script src="./scripts/swiper.js"></script>
 </body>
+
 </html>
