@@ -70,41 +70,27 @@ for (const rating of reviewsRatings) {
   }
 }
 
-// СКРЫТИЕ НОМЕРА КАРТЫ
-document.addEventListener("DOMContentLoaded", function() {
-  const cardNumberElements = document.querySelectorAll('.credits-card__number');
-  cardNumberElements.forEach((cardNumberElement) => {
-    const cardNumber = cardNumberElement.textContent;
-    
-    // Заменяем первые 12 цифр на звездочки
-    const maskedNumber = cardNumber.replace(/\d{12}/, '**** **** **** ');
-    
-    // Обновляем содержимое элемента
-    cardNumberElement.textContent = maskedNumber;
-  })
-});
-
-// КОПИРОВАНИЕ НОМЕРА КАРТЫ В БУФЕР ОБМЕНА
-document.querySelectorAll('.credits-card__button--copy').forEach((button) => {
-  button.addEventListener("click", function() {
-    const cardNumberElement = button.parentNode.querySelector('.credits-card__number');
-    const cardNumber = cardNumberElement.getAttribute('data-number');
-
-    // Используем API для работы с буфером обмена
-    navigator.clipboard.writeText(cardNumber).then(function() {
-      alert("Номер карты скопирован в буфер обмена!");
-    }).catch(function(err) {
-        console.error("Ошибка при копировании: ", err);
-    });
-  })
-});
-
 // ВЫПАДАЮЩЕЕ МЕНЮ КРЕДИТНОЙ КАРТЫ
-document.querySelectorAll('.credits-card__button--menu').forEach((button) => {
-  const menu = button.parentNode.querySelector('.credits-card__list')
-  console.log('button.parentNode :>> ', button.parentNode);
-  console.log('menu :>> ', menu);
-  button.addEventListener('click', () => {
-    menu.classList.remove('hidden');
-  })
-})
+const creditsCardMenuButtons = document.querySelectorAll('.credits-card__button--menu')
+creditsCardMenuButtons.forEach((button) => button.addEventListener('focus', () => button.nextElementSibling.classList.remove('hidden')))
+creditsCardMenuButtons.forEach((button) => button.addEventListener('blur', () => button.nextElementSibling.classList.add('hidden')))
+
+// КОПИРОВАНИЕ НОМЕРА КАРТЫ В БУФЕР
+const creditsCardCopyButtons = document.querySelectorAll('.credits-card__copy')
+creditsCardCopyButtons.forEach((button) => button.addEventListener('click', () => {
+  const cardNumber = button.previousElementSibling.getAttribute('data-number')
+  navigator.clipboard.writeText(cardNumber)
+    .then(() => {
+        // Уведомление о том, что номер скопирован
+        alert('Номер карты скопирован'); // #TODO: изменить на другую всплывашку
+    })
+    .catch(err => {
+        console.error('Ошибка при копировании: ', err);
+    });
+}))
+
+// СКРЫТИЕ НАЧАЛА НОМЕРА КАРТЫ
+const cardNumbers = document.querySelectorAll('.credits-card__number')
+cardNumbers.forEach((number) => (number.textContent = `**** **** **** ${number.textContent.slice(-4)}`))
+
+// 

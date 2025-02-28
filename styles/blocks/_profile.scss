@@ -1,0 +1,94 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  &-account {
+    @include card;
+  
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__title {
+      @include first-letter-uppercase;
+
+      flex: 100%;
+
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &__avatar {
+      @include flex-center;
+      @include first-letter-uppercase(true);
+
+      flex: 1 0 174px;
+      height: 174px;
+
+      padding: 48px;
+
+      font-size: 80px;
+      line-height: 22px;
+      background-color: var(--color-dark);
+      color: var(--color-accent);
+      border-radius: 100%;
+    }
+
+    &__fields {
+      width: 100%;
+    }
+
+    &__button {
+      @include first-letter-uppercase;
+
+      max-width: max-content;
+      align-self: end;
+    }
+  }
+
+  &-password {
+    @include card(var(--color-gray));
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__title {
+      @include first-letter-uppercase;
+
+      flex: 100%;
+
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__fields {
+      display: flex;
+      gap: 16px;
+    }
+
+    &__field {
+      flex: 1;
+    }
+
+    &__button {
+      @include first-letter-uppercase;
+
+      max-width: max-content;
+      align-self: end;
+    }
+  }
+}
